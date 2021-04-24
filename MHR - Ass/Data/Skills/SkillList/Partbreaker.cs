@@ -1,8 +1,14 @@
-
 namespace MHR___Ass.Data.Skills.SkillList
 {
     public class Partbreaker : Skill
     {
+        public override int MaxValue { get; set; } = 3;
+        public override string Description { get; set; } = @"
+Makes it easier to break or sever parts of large monsters.
+1: Part damage +10%
+2: Part damage +20%
+3: Part damage +30%";
+
         public Partbreaker(int value) : base(value)
         {
         }
@@ -23,13 +29,5 @@ namespace MHR___Ass.Data.Skills.SkillList
 
             return tmp;
         }
-
-        public override int MaxValue { get; set; } = 3;
-        public override string Description { get; set; } = @"
-Makes it easier to break or sever parts of large monsters.
-1: Part damage +10%
-2: Part damage +20%
-3: Part damage +30%";
     }
- }
-            
+}

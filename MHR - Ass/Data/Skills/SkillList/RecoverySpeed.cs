@@ -1,8 +1,14 @@
-
 namespace MHR___Ass.Data.Skills.SkillList
 {
     public class RecoverySpeed : Skill
     {
+        public override int MaxValue { get; set; } = 3;
+        public override string Description { get; set; } = @"
+Speeds healing of recoverable damage (the red portion of the health gauge).
+1: Doubles the speed at which you heal recoverable damage.
+2: Triples the speed at which you heal recoverable damage.
+3: Quadruples the speed at which you heal recoverable damage.";
+
         public RecoverySpeed(int value) : base(value)
         {
         }
@@ -23,13 +29,5 @@ namespace MHR___Ass.Data.Skills.SkillList
 
             return tmp;
         }
-
-        public override int MaxValue { get; set; } = 3;
-        public override string Description { get; set; } = @"
-Speeds healing of recoverable damage (the red portion of the health gauge).
-1: Doubles the speed at which you heal recoverable damage.
-2: Triples the speed at which you heal recoverable damage.
-3: Quadruples the speed at which you heal recoverable damage.";
     }
- }
-            
+}

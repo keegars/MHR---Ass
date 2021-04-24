@@ -8,7 +8,7 @@ namespace MHR___Ass.Data.Armors.Sets
         public ChannelerS()
         {
             Name = "Channeler S/Utsushi (Hidden) S";
-            
+
             ArmorRank = ArmorRank.High;
 
             //Base values

@@ -1,8 +1,13 @@
-
 namespace MHR___Ass.Data.Skills.SkillList
 {
     public class MuckResistance : Skill
     {
+        public override int MaxValue { get; set; } = 2;
+        public override string Description { get; set; } = @"
+Reduces impairments to mobility while stuck in monster muck or deep snow.
+1: Reduces limits on movement speed.
+2: Negates limits to movement speed.";
+
         public MuckResistance(int value) : base(value)
         {
         }
@@ -23,12 +28,5 @@ namespace MHR___Ass.Data.Skills.SkillList
 
             return tmp;
         }
-
-        public override int MaxValue { get; set; } = 2;
-        public override string Description { get; set; } = @"
-Reduces impairments to mobility while stuck in monster muck or deep snow.
-1: Reduces limits on movement speed.
-2: Negates limits to movement speed.";
     }
- }
-            
+}

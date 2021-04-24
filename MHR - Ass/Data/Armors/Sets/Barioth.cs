@@ -7,7 +7,6 @@ namespace MHR___Ass.Data.Armors.Sets
         public Barioth()
         {
             Name = "Barioth";
-            
 
             //Base values
             BaseDefense = 20;

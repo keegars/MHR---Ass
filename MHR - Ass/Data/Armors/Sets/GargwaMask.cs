@@ -7,7 +7,6 @@ namespace MHR___Ass.Data.Armors.Sets
         public GargwaMask()
         {
             Name = "Gargwa Mask";
-            
 
             //Base values
             BaseDefense = 14;

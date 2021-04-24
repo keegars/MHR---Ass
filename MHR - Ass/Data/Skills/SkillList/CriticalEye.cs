@@ -1,8 +1,18 @@
-
 namespace MHR___Ass.Data.Skills.SkillList
 {
     public class CriticalEye : Skill
     {
+        public override int MaxValue { get; set; } = 7;
+        public override string Description { get; set; } = @"
+Increases affinity.
+1: Affinity +5%
+2: Affinity +10%
+3: Affinity +15%
+4: Affinity +20%
+5: Affinity +25%
+6: Affinity +30%
+7: Affinity +40%";
+
         public CriticalEye(int value) : base(value)
         {
         }
@@ -23,17 +33,5 @@ namespace MHR___Ass.Data.Skills.SkillList
 
             return tmp;
         }
-
-        public override int MaxValue { get; set; } = 7;
-        public override string Description { get; set; } = @"
-Increases affinity.
-1: Affinity +5%
-2: Affinity +10%
-3: Affinity +15%
-4: Affinity +20%
-5: Affinity +25%
-6: Affinity +30%
-7: Affinity +40%";
     }
- }
-            
+}

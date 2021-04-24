@@ -8,7 +8,7 @@ namespace MHR___Ass.Data.Armors.Sets
         public ChainmailS()
         {
             Name = "Chainmail S";
-            
+
             ArmorRank = ArmorRank.High;
 
             //Base values

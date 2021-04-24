@@ -8,7 +8,7 @@ namespace MHR___Ass.Data.Armors.Sets
         public UtsushiVisibleS()
         {
             Name = "Utsushi (Visible) S";
-            
+
             ArmorRank = ArmorRank.High;
 
             //Base values

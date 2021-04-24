@@ -8,7 +8,7 @@ namespace MHR___Ass.Data.Armors.Sets
         public TetranadonS()
         {
             Name = "Tetranadon S";
-            
+
             ArmorRank = ArmorRank.High;
 
             //Base values

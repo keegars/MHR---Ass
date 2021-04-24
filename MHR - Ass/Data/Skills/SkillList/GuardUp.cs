@@ -1,8 +1,14 @@
-
 namespace MHR___Ass.Data.Skills.SkillList
 {
     public class GuardUp : Skill
     {
+        public override int MaxValue { get; set; } = 3;
+        public override string Description { get; set; } = @"
+Allows you to guard against ordinarily unblockable attacks.
+1: Reduces damage taken by 30%.
+2: Reduces damage taken by 50%.
+3: Reduces damage taken by 80%.";
+
         public GuardUp(int value) : base(value)
         {
         }
@@ -23,13 +29,5 @@ namespace MHR___Ass.Data.Skills.SkillList
 
             return tmp;
         }
-
-        public override int MaxValue { get; set; } = 3;
-        public override string Description { get; set; } = @"
-Allows you to guard against ordinarily unblockable attacks.
-1: Reduces damage taken by 30%.
-2: Reduces damage taken by 50%.
-3: Reduces damage taken by 80%.";
     }
- }
-            
+}

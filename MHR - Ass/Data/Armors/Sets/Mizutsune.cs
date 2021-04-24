@@ -7,7 +7,6 @@ namespace MHR___Ass.Data.Armors.Sets
         public Mizutsune()
         {
             Name = "Mizutsune";
-            
 
             //Base values
             BaseDefense = 26;

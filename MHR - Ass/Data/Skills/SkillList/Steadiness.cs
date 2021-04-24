@@ -1,8 +1,13 @@
-
 namespace MHR___Ass.Data.Skills.SkillList
 {
     public class Steadiness : Skill
     {
+        public override int MaxValue { get; set; } = 2;
+        public override string Description { get; set; } = @"
+Suppresses the deviation of bowgun shots.
+1: Deviation -1
+2: Deviation -2";
+
         public Steadiness(int value) : base(value)
         {
         }
@@ -23,12 +28,5 @@ namespace MHR___Ass.Data.Skills.SkillList
 
             return tmp;
         }
-
-        public override int MaxValue { get; set; } = 2;
-        public override string Description { get; set; } = @"
-Suppresses the deviation of bowgun shots.
-1: Deviation -1
-2: Deviation -2";
     }
- }
-            
+}

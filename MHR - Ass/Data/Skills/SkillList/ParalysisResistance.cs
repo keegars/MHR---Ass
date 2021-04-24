@@ -1,8 +1,14 @@
-
 namespace MHR___Ass.Data.Skills.SkillList
 {
     public class ParalysisResistance : Skill
     {
+        public override int MaxValue { get; set; } = 3;
+        public override string Description { get; set; } = @"
+Reduces the duration of paralysis.
+1: Reduces the duration of paralysis by 30%.
+2: Reduces the duration of paralysis by 60%.
+3: Prevents paralysis.";
+
         public ParalysisResistance(int value) : base(value)
         {
         }
@@ -23,13 +29,5 @@ namespace MHR___Ass.Data.Skills.SkillList
 
             return tmp;
         }
-
-        public override int MaxValue { get; set; } = 3;
-        public override string Description { get; set; } = @"
-Reduces the duration of paralysis.
-1: Reduces the duration of paralysis by 30%.
-2: Reduces the duration of paralysis by 60%.
-3: Prevents paralysis.";
     }
- }
-            
+}

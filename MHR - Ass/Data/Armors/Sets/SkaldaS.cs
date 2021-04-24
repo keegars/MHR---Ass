@@ -8,7 +8,7 @@ namespace MHR___Ass.Data.Armors.Sets
         public SkaldaS()
         {
             Name = "Skalda S/Spio S";
-            
+
             ArmorRank = ArmorRank.High;
 
             //Base values

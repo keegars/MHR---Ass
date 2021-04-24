@@ -1,8 +1,14 @@
-
 namespace MHR___Ass.Data.Skills.SkillList
 {
     public class EvadeExtender : Skill
     {
+        public override int MaxValue { get; set; } = 3;
+        public override string Description { get; set; } = @"
+Increases evade distance.
+1: Slightly extends evasion distance.
+2: Extends evasion distance.
+3: Greatly extends evasion distance.";
+
         public EvadeExtender(int value) : base(value)
         {
         }
@@ -23,13 +29,5 @@ namespace MHR___Ass.Data.Skills.SkillList
 
             return tmp;
         }
-
-        public override int MaxValue { get; set; } = 3;
-        public override string Description { get; set; } = @"
-Increases evade distance.
-1: Slightly extends evasion distance.
-2: Extends evasion distance.
-3: Greatly extends evasion distance.";
     }
- }
-            
+}

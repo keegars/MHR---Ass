@@ -7,7 +7,6 @@ namespace MHR___Ass.Data.Armors.Sets
         public Rhenoplos()
         {
             Name = "Rhenoplos";
-            
 
             //Base values
             BaseDefense = 14;

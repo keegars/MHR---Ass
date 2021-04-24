@@ -7,7 +7,6 @@ namespace MHR___Ass.Data.Armors.Sets
         public DeathStench()
         {
             Name = "Death Stench";
-            
 
             //Base values
             BaseDefense = 18;

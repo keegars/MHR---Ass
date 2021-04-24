@@ -8,7 +8,7 @@ namespace MHR___Ass.Data.Armors.Sets
         public VolvidonS()
         {
             Name = "Volvidon S";
-            
+
             ArmorRank = ArmorRank.High;
 
             //Base values

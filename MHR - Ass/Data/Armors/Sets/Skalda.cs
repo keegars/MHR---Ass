@@ -7,7 +7,6 @@ namespace MHR___Ass.Data.Armors.Sets
         public Skalda()
         {
             Name = "Skalda/Spio";
-            
 
             //Base values
             BaseDefense = 12;

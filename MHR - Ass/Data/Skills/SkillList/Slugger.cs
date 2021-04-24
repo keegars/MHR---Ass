@@ -1,8 +1,14 @@
-
 namespace MHR___Ass.Data.Skills.SkillList
 {
     public class Slugger : Skill
     {
+        public override int MaxValue { get; set; } = 3;
+        public override string Description { get; set; } = @"
+Makes it easier to stun monsters.
+1: Stun power +20%
+2: Stun power +30%
+3: Stun power +40%";
+
         public Slugger(int value) : base(value)
         {
         }
@@ -23,13 +29,5 @@ namespace MHR___Ass.Data.Skills.SkillList
 
             return tmp;
         }
-
-        public override int MaxValue { get; set; } = 3;
-        public override string Description { get; set; } = @"
-Makes it easier to stun monsters.
-1: Stun power +20%
-2: Stun power +30%
-3: Stun power +40%";
     }
- }
-            
+}

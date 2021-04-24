@@ -8,7 +8,7 @@ namespace MHR___Ass.Data.Armors.Sets
         public Golden()
         {
             Name = "Golden";
-            
+
             ArmorRank = ArmorRank.High;
 
             //Base values

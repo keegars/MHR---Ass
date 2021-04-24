@@ -8,7 +8,7 @@ namespace MHR___Ass.Data.Armors.Sets
         public SomnacanthS()
         {
             Name = "Somnacanth S";
-            
+
             ArmorRank = ArmorRank.High;
 
             //Base values

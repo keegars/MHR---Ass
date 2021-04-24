@@ -7,7 +7,6 @@ namespace MHR___Ass.Data.Armors.Sets
         public Sinister()
         {
             Name = "Sinister";
-            
 
             //Base values
             BaseDefense = 28;

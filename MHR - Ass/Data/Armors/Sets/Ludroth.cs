@@ -7,7 +7,6 @@ namespace MHR___Ass.Data.Armors.Sets
         public Ludroth()
         {
             Name = "Ludroth";
-            
 
             //Base values
             BaseDefense = 18;

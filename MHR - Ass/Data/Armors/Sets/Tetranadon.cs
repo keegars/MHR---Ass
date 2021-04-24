@@ -7,7 +7,6 @@ namespace MHR___Ass.Data.Armors.Sets
         public Tetranadon()
         {
             Name = "Tetranadon";
-            
 
             //Base values
             BaseDefense = 18;

@@ -7,7 +7,6 @@ namespace MHR___Ass.Data.Armors.Sets
         public Alloy()
         {
             Name = "Alloy";
-            
 
             //Base values
             BaseDefense = 10;

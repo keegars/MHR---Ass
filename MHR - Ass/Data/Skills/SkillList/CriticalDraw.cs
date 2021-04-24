@@ -1,8 +1,14 @@
-
 namespace MHR___Ass.Data.Skills.SkillList
 {
     public class CriticalDraw : Skill
     {
+        public override int MaxValue { get; set; } = 3;
+        public override string Description { get; set; } = @"
+Increases affinity for a short time after performing a draw attack. (Does not include Silkbind attacks.)
+1: Affinity +10%
+2: Affinity +20%
+3: Affinity +40%";
+
         public CriticalDraw(int value) : base(value)
         {
         }
@@ -23,13 +29,5 @@ namespace MHR___Ass.Data.Skills.SkillList
 
             return tmp;
         }
-
-        public override int MaxValue { get; set; } = 3;
-        public override string Description { get; set; } = @"
-Increases affinity for a short time after performing a draw attack. (Does not include Silkbind attacks.)
-1: Affinity +10%
-2: Affinity +20%
-3: Affinity +40%";
     }
- }
-            
+}

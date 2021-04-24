@@ -7,7 +7,6 @@ namespace MHR___Ass.Data.Armors.Sets
         public Bishaten()
         {
             Name = "Bishaten";
-            
 
             //Base values
             BaseDefense = 22;

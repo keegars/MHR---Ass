@@ -7,7 +7,6 @@ namespace MHR___Ass.Data.Armors.Sets
         public Medium()
         {
             Name = "Medium";
-            
 
             //Base values
             BaseDefense = 24;

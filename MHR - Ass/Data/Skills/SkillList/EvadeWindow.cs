@@ -1,8 +1,16 @@
-
 namespace MHR___Ass.Data.Skills.SkillList
 {
     public class EvadeWindow : Skill
     {
+        public override int MaxValue { get; set; } = 5;
+        public override string Description { get; set; } = @"
+Extends the invulnerability period when evading.
+1: Very slightly increases invulnerability window.
+2: Slightly increases invulnerability window.
+3: Increases invulnerability window.
+4: Greatly increases invulnerability window.
+5: Massively increases invulnerability window.";
+
         public EvadeWindow(int value) : base(value)
         {
         }
@@ -23,15 +31,5 @@ namespace MHR___Ass.Data.Skills.SkillList
 
             return tmp;
         }
-
-        public override int MaxValue { get; set; } = 5;
-        public override string Description { get; set; } = @"
-Extends the invulnerability period when evading.
-1: Very slightly increases invulnerability window.
-2: Slightly increases invulnerability window.
-3: Increases invulnerability window.
-4: Greatly increases invulnerability window.
-5: Massively increases invulnerability window.";
     }
- }
-            
+}

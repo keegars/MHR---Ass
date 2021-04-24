@@ -6,16 +6,14 @@ namespace MHR___Ass.Data.Charms
 {
     public class Charm
     {
+        private HashSet<Skill> _Skills = new HashSet<Skill>();
+        private HashSet<Slot> _Slots = new HashSet<Slot>();
         public string Name { get; set; }
         public Slot? Slot1 { get; set; }
         public Slot? Slot2 { get; set; }
         public Slot? Slot3 { get; set; }
         public Skill? Skill1 { get; set; }
         public Skill? Skill2 { get; set; }
-
-        private HashSet<Skill> _Skills = new HashSet<Skill>();
-        private HashSet<Slot> _Slots = new HashSet<Slot>();
-
         public HashSet<Skill> GetSkills(bool refresh = false)
         {
             if (refresh || _Skills == null || _Skills.Count == 0)
@@ -23,7 +21,6 @@ namespace MHR___Ass.Data.Charms
                 _Skills = new HashSet<Skill>();
                 TryAdd(_Skills, Skill1);
                 TryAdd(_Skills, Skill2);
-
             }
 
             return _Skills;
@@ -51,6 +48,4 @@ namespace MHR___Ass.Data.Charms
             }
         }
     }
-
-   
 }

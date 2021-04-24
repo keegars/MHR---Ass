@@ -8,7 +8,7 @@ namespace MHR___Ass.Data.Armors.Sets
         public RhopessaS()
         {
             Name = "Rhopessa S/Aelucanth S";
-            
+
             ArmorRank = ArmorRank.High;
 
             //Base values

@@ -7,7 +7,6 @@ namespace MHR___Ass.Data.Armors.Sets
         public Vaik()
         {
             Name = "Vaik";
-            
 
             //Base values
             BaseDefense = 18;

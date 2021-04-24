@@ -7,7 +7,6 @@ namespace MHR___Ass.Data.Armors.Sets
         public Leather()
         {
             Name = "Leather";
-            
 
             //Base values
             BaseDefense = 1;

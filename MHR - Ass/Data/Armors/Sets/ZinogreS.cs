@@ -8,7 +8,7 @@ namespace MHR___Ass.Data.Armors.Sets
         public ZinogreS()
         {
             Name = "Zinogre S";
-            
+
             ArmorRank = ArmorRank.High;
 
             //Base values

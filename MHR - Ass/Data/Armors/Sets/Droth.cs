@@ -7,7 +7,6 @@ namespace MHR___Ass.Data.Armors.Sets
         public Droth()
         {
             Name = "Droth";
-            
 
             //Base values
             BaseDefense = 14;

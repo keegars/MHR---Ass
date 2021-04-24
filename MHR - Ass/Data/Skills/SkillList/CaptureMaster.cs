@@ -1,8 +1,12 @@
-
 namespace MHR___Ass.Data.Skills.SkillList
 {
     public class CaptureMaster : Skill
     {
+        public override int MaxValue { get; set; } = 1;
+        public override string Description { get; set; } = @"
+High chance of increased capture rewards. (No effect when joining mid-quest.)
+1: Activates skill effect.";
+
         public CaptureMaster(int value) : base(value)
         {
         }
@@ -23,11 +27,5 @@ namespace MHR___Ass.Data.Skills.SkillList
 
             return tmp;
         }
-
-        public override int MaxValue { get; set; } = 1;
-        public override string Description { get; set; } = @"
-High chance of increased capture rewards. (No effect when joining mid-quest.)
-1: Activates skill effect.";
     }
- }
-            
+}

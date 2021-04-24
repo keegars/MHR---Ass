@@ -8,7 +8,7 @@ namespace MHR___Ass.Data.Armors.Sets
         public Shell_StuddedS()
         {
             Name = "Shell-Studded S";
-            
+
             ArmorRank = ArmorRank.High;
 
             //Base values

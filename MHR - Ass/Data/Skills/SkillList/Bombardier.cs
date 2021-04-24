@@ -1,8 +1,14 @@
-
 namespace MHR___Ass.Data.Skills.SkillList
 {
     public class Bombardier : Skill
     {
+        public override int MaxValue { get; set; } = 3;
+        public override string Description { get; set; } = @"
+Increases the damage of explosive items.
+1: Explosive power +10%
+2: Explosive power +20%
+3: Explosive power +30%";
+
         public Bombardier(int value) : base(value)
         {
         }
@@ -23,13 +29,5 @@ namespace MHR___Ass.Data.Skills.SkillList
 
             return tmp;
         }
-
-        public override int MaxValue { get; set; } = 3;
-        public override string Description { get; set; } = @"
-Increases the damage of explosive items.
-1: Explosive power +10%
-2: Explosive power +20%
-3: Explosive power +30%";
     }
- }
-            
+}

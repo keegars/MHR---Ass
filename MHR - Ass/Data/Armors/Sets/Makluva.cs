@@ -7,7 +7,6 @@ namespace MHR___Ass.Data.Armors.Sets
         public Makluva()
         {
             Name = "Makluva";
-            
 
             //Base values
             BaseDefense = 24;

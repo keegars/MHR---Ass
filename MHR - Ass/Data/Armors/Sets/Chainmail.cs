@@ -7,7 +7,6 @@ namespace MHR___Ass.Data.Armors.Sets
         public Chainmail()
         {
             Name = "Chainmail";
-            
 
             //Base values
             BaseDefense = 4;

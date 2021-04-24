@@ -7,7 +7,6 @@ namespace MHR___Ass.Data.Armors.Sets
         public Hunter()
         {
             Name = "Hunter";
-            
 
             //Base values
             BaseDefense = 4;

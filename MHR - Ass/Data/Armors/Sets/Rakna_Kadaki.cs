@@ -8,7 +8,7 @@ namespace MHR___Ass.Data.Armors.Sets
         public Rakna_Kadaki()
         {
             Name = "Rakna-Kadaki";
-            
+
             ArmorRank = ArmorRank.High;
 
             //Base values

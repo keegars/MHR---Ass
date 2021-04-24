@@ -8,7 +8,7 @@ namespace MHR___Ass.Data.Armors.Sets
         public RhenoplosS()
         {
             Name = "Rhenoplos S";
-            
+
             ArmorRank = ArmorRank.High;
 
             //Base values

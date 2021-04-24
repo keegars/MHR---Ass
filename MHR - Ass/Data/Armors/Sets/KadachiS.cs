@@ -8,7 +8,7 @@ namespace MHR___Ass.Data.Armors.Sets
         public KadachiS()
         {
             Name = "Kadachi S";
-            
+
             ArmorRank = ArmorRank.High;
 
             //Base values

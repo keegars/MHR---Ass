@@ -7,7 +7,6 @@ namespace MHR___Ass.Data.Armors.Sets
         public Aknosom()
         {
             Name = "Aknosom";
-            
 
             //Base values
             BaseDefense = 16;

@@ -8,7 +8,7 @@ namespace MHR___Ass.Data.Armors.Sets
         public MakluvaS()
         {
             Name = "Makluva S";
-            
+
             ArmorRank = ArmorRank.High;
 
             //Base values

@@ -7,7 +7,6 @@ namespace MHR___Ass.Data.Armors.Sets
         public Slagtoth()
         {
             Name = "Slagtoth";
-            
 
             //Base values
             BaseDefense = 14;

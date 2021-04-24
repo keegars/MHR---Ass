@@ -8,7 +8,7 @@ namespace MHR___Ass.Data.Armors.Sets
         public ChaosS()
         {
             Name = "Chaos S";
-            
+
             ArmorRank = ArmorRank.High;
 
             //Base values

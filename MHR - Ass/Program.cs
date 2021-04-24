@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Windows.Forms;
-using MHR___Ass.Data.Armors.Sets;
 
 namespace MHR___Ass
 {

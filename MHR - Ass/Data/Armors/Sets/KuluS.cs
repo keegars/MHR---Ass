@@ -8,9 +8,9 @@ namespace MHR___Ass.Data.Armors.Sets
         public KuluS()
         {
             Name = "Kulu S";
-            
+
             ArmorRank = ArmorRank.High;
-            
+
             //Base values
             BaseDefense = 38;
             Fire.Value = 0;

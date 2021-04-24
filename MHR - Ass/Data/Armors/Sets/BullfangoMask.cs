@@ -7,7 +7,6 @@ namespace MHR___Ass.Data.Armors.Sets
         public BullfangoMask()
         {
             Name = "Bullfango Mask";
-            
 
             //Base values
             BaseDefense = 14;

@@ -8,7 +8,7 @@ namespace MHR___Ass.Data.Armors.Sets
         public EdelS()
         {
             Name = "Edel S";
-            
+
             ArmorRank = ArmorRank.High;
 
             //Base values

@@ -8,7 +8,7 @@ namespace MHR___Ass.Data.Armors.Sets
         public NargacugaS()
         {
             Name = "Nargacuga S";
-            
+
             ArmorRank = ArmorRank.High;
 
             //Base values

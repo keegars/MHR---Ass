@@ -7,7 +7,6 @@ namespace MHR___Ass.Data.Armors.Sets
         public Ingot()
         {
             Name = "Ingot";
-            
 
             //Base values
             BaseDefense = 18;

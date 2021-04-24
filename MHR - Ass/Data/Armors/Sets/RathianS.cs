@@ -8,7 +8,7 @@ namespace MHR___Ass.Data.Armors.Sets
         public RathianS()
         {
             Name = "Rathian S";
-            
+
             ArmorRank = ArmorRank.High;
 
             //Base values

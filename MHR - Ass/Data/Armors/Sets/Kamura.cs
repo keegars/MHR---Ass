@@ -7,7 +7,6 @@ namespace MHR___Ass.Data.Armors.Sets
         public Kamura()
         {
             Name = "Kamura";
-            
 
             //Base values
             BaseDefense = 1;

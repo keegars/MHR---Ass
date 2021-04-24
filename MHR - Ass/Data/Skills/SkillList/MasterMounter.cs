@@ -1,8 +1,12 @@
-
 namespace MHR___Ass.Data.Skills.SkillList
 {
     public class MasterMounter : Skill
     {
+        public override int MaxValue { get; set; } = 1;
+        public override string Description { get; set; } = @"
+Improves your Wyvern Riding skills.
+1: Makes filling the Riding Gauge easier and increases ease of parrying.";
+
         public MasterMounter(int value) : base(value)
         {
         }
@@ -23,11 +27,5 @@ namespace MHR___Ass.Data.Skills.SkillList
 
             return tmp;
         }
-
-        public override int MaxValue { get; set; } = 1;
-        public override string Description { get; set; } = @"
-Improves your Wyvern Riding skills.
-1: Makes filling the Riding Gauge easier and increases ease of parrying.";
     }
- }
-            
+}

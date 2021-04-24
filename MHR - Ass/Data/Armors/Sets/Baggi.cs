@@ -7,7 +7,6 @@ namespace MHR___Ass.Data.Armors.Sets
         public Baggi()
         {
             Name = "Baggi";
-            
 
             //Base values
             BaseDefense = 10;

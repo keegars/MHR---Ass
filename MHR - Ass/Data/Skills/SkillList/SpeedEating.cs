@@ -1,8 +1,14 @@
-
 namespace MHR___Ass.Data.Skills.SkillList
 {
     public class SpeedEating : Skill
     {
+        public override int MaxValue { get; set; } = 3;
+        public override string Description { get; set; } = @"
+Increases meat-eating and item-consumption speed.
+1: Slightly increases eating speed.
+2: Increases eating speed.
+3: Greatly increases eating speed.";
+
         public SpeedEating(int value) : base(value)
         {
         }
@@ -23,13 +29,5 @@ namespace MHR___Ass.Data.Skills.SkillList
 
             return tmp;
         }
-
-        public override int MaxValue { get; set; } = 3;
-        public override string Description { get; set; } = @"
-Increases meat-eating and item-consumption speed.
-1: Slightly increases eating speed.
-2: Increases eating speed.
-3: Greatly increases eating speed.";
     }
- }
-            
+}

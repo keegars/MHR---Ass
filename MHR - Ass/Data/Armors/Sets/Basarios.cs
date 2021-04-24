@@ -7,7 +7,6 @@ namespace MHR___Ass.Data.Armors.Sets
         public Basarios()
         {
             Name = "Basarios";
-            
 
             //Base values
             BaseDefense = 22;

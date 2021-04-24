@@ -7,7 +7,6 @@ namespace MHR___Ass.Data.Armors.Sets
         public Lagombi()
         {
             Name = "Lagombi";
-            
 
             //Base values
             BaseDefense = 10;

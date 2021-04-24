@@ -8,7 +8,7 @@ namespace MHR___Ass.Data.Armors.Sets
         public PukeiS()
         {
             Name = "Pukei S";
-            
+
             ArmorRank = ArmorRank.High;
 
             //Base values

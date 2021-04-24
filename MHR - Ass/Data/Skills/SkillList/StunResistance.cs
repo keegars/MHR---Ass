@@ -1,8 +1,14 @@
-
 namespace MHR___Ass.Data.Skills.SkillList
 {
     public class StunResistance : Skill
     {
+        public override int MaxValue { get; set; } = 3;
+        public override string Description { get; set; } = @"
+Reduces stun duration.
+1: Reduces the duration of stun by 60%.
+2: Reduces the duration of stun by 90%.
+3: Prevents stun.";
+
         public StunResistance(int value) : base(value)
         {
         }
@@ -23,13 +29,5 @@ namespace MHR___Ass.Data.Skills.SkillList
 
             return tmp;
         }
-
-        public override int MaxValue { get; set; } = 3;
-        public override string Description { get; set; } = @"
-Reduces stun duration.
-1: Reduces the duration of stun by 60%.
-2: Reduces the duration of stun by 90%.
-3: Prevents stun.";
     }
- }
-            
+}

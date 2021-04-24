@@ -106,12 +106,6 @@ namespace MHR___Ass
             var skillKeys = _Skills.Select(z => z.Key).OrderBy(z => z).ToList();
             skillKeys.Insert(0, "None");
 
-            //Get currently occupied skill boxes and their skill/value
-
-            //Go through each one that isn't that skill box and remove the skills not needed
-
-            //Go through each skill box and if it had a previous value, reselect it, and it's value
-
             foreach (var comboBox in _SkillBoxes)
             {
                 comboBox.SkillBox.Items.Clear();
@@ -164,8 +158,6 @@ namespace MHR___Ass
                 NewDescription(value == null ? "" : value.Description);
                 ValueBoxUpdate(comboBox.ValueBox, value == null ? 0 : value.MaxValue);
             }
-
-           
         }
 
         private SkillComboBox GetSkillComboBox(int element)
@@ -440,7 +432,6 @@ namespace MHR___Ass
             FindCombinationsParrallel(searchArmorSets, totalCombos, searchSkills);
         }
 
-
         private void StartStopWatch()
         {
             _StopWatch = new Stopwatch();
@@ -449,7 +440,6 @@ namespace MHR___Ass
 
         private void StopStopWatch()
         {
-            //Some process
             _StopWatch.Stop();
 
             executionLabel.Text = $"Execution Time: {_StopWatch.Elapsed.Humanize(3)}";
@@ -464,8 +454,6 @@ namespace MHR___Ass
             {
                 var armorset = _ArmorSetSearch[i].DeepClone();
 
-                ////!!!!!!!!!!!!!!!!!!!!
-                //////Charm slots and skills not being transferred properly......
                 armorset.Charm = armorset.Charm.DeepClone();
 
                 armorset.EmptyPopulatedSlots();
@@ -531,7 +519,6 @@ namespace MHR___Ass
                             sb.Append("X");
                         }
                     }
-                
                 }
 
                 sb.AppendLine();
@@ -635,7 +622,6 @@ namespace MHR___Ass
                 MaxDegreeOfParallelism = _Max_Parrallel
             };
 
-            //var test = searchArmorSets.ToList();
             var queue = new BlockingCollection<ArmorSet>();
             var isFinished = false;
             Task.Run(() =>
@@ -716,7 +702,6 @@ namespace MHR___Ass
 
         private void BackgroundWorker_Completed(object sender, RunWorkerCompletedEventArgs e)
         {
-            //Once limit has been reached or we have ran out of combinations, show the list in richtextbox, may be allowing filtering or ordering of top 1000? by slots available, armor total, fire/dragon/thunder/water/ice res, extra skills on each set?
             DisplayArmorSets();
 
             StopStopWatch();
@@ -873,7 +858,6 @@ namespace MHR___Ass
             {
                 comboBox.SelectedIndex = 0;
             }
-
             else if (comboBox.Items[comboBox.SelectedIndex].ToString() != "None")
             {
                 _Skills.TryGetValue(comboBox.Items[comboBox.SelectedIndex].ToString(), out var value);
@@ -907,7 +891,6 @@ namespace MHR___Ass
             {
                 comboBox.SelectedIndex = 0;
             }
-
             else if (comboBox.Items[comboBox.SelectedIndex].ToString() != "None")
             {
                 _Skills.TryGetValue(comboBox.Items[comboBox.SelectedIndex].ToString(), out var value);

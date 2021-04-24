@@ -7,7 +7,6 @@ namespace MHR___Ass.Data.Armors.Sets
         public Jelly()
         {
             Name = "Jelly";
-            
 
             //Base values
             BaseDefense = 24;

@@ -1,8 +1,14 @@
-
 namespace MHR___Ass.Data.Skills.SkillList
 {
     public class BlightResistance : Skill
     {
+        public override int MaxValue { get; set; } = 3;
+        public override string Description { get; set; } = @"
+Grants protection against all elemental blights.
+1: Reduces the duration of all elemental blights by 50%.
+2: Reduces the duration of all elemental blights by 75%.
+3: Nullifies all elemental blights.";
+
         public BlightResistance(int value) : base(value)
         {
         }
@@ -23,13 +29,5 @@ namespace MHR___Ass.Data.Skills.SkillList
 
             return tmp;
         }
-
-        public override int MaxValue { get; set; } = 3;
-        public override string Description { get; set; } = @"
-Grants protection against all elemental blights.
-1: Reduces the duration of all elemental blights by 50%.
-2: Reduces the duration of all elemental blights by 75%.
-3: Nullifies all elemental blights.";
     }
- }
-            
+}

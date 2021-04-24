@@ -7,7 +7,6 @@ namespace MHR___Ass.Data.Armors.Sets
         public Edel()
         {
             Name = "Edel";
-            
 
             //Base values
             BaseDefense = 12;

@@ -8,7 +8,7 @@ namespace MHR___Ass.Data.Armors.Sets
         public ChromeMetal()
         {
             Name = "Chrome Metal";
-            
+
             ArmorRank = ArmorRank.High;
 
             //Base values

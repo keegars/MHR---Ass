@@ -7,7 +7,6 @@ namespace MHR___Ass.Data.Armors.Sets
         public Tigrex()
         {
             Name = "Tigrex";
-            
 
             //Base values
             BaseDefense = 30;

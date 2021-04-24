@@ -8,7 +8,7 @@ namespace MHR___Ass.Data.Armors.Sets
         public VaikS()
         {
             Name = "Vaik S";
-            
+
             ArmorRank = ArmorRank.High;
 
             //Base values

@@ -7,7 +7,6 @@ namespace MHR___Ass.Data.Armors.Sets
         public Nargacuga()
         {
             Name = "Nargacuga";
-            
 
             //Base values
             BaseDefense = 26;

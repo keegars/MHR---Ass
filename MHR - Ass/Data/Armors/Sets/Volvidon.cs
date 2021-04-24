@@ -7,7 +7,6 @@ namespace MHR___Ass.Data.Armors.Sets
         public Volvidon()
         {
             Name = "Volvidon";
-            
 
             //Base values
             BaseDefense = 20;

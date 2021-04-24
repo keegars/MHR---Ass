@@ -7,7 +7,6 @@ namespace MHR___Ass.Data.Armors.Sets
         public Channeler()
         {
             Name = "Channeler/Utsushi (Hidden)";
-            
 
             //Base values
             BaseDefense = 24;

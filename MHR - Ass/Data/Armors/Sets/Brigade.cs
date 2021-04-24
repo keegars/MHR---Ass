@@ -7,7 +7,6 @@ namespace MHR___Ass.Data.Armors.Sets
         public Brigade()
         {
             Name = "Brigade";
-            
 
             //Base values
             BaseDefense = 26;

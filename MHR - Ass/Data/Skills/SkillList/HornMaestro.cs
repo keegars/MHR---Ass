@@ -1,8 +1,12 @@
-
 namespace MHR___Ass.Data.Skills.SkillList
 {
     public class HornMaestro : Skill
     {
+        public override int MaxValue { get; set; } = 1;
+        public override string Description { get; set; } = @"
+Increases overall performance speed and shockwave damage.
+1: Activates skill effect.";
+
         public HornMaestro(int value) : base(value)
         {
         }
@@ -23,11 +27,5 @@ namespace MHR___Ass.Data.Skills.SkillList
 
             return tmp;
         }
-
-        public override int MaxValue { get; set; } = 1;
-        public override string Description { get; set; } = @"
-Increases overall performance speed and shockwave damage.
-1: Activates skill effect.";
     }
- }
-            
+}

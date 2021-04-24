@@ -7,7 +7,6 @@ namespace MHR___Ass.Data.Armors.Sets
         public Bone()
         {
             Name = "Bone";
-            
 
             //Base values
             BaseDefense = 10;

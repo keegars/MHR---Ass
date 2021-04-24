@@ -1,8 +1,14 @@
-
 namespace MHR___Ass.Data.Skills.SkillList
 {
     public class RapidFireUp : Skill
     {
+        public override int MaxValue { get; set; } = 3;
+        public override string Description { get; set; } = @"
+Improves light bowgun rapid fire.
+1: Rapid fire damage +5%
+2: Rapid fire damage +10%
+3: Rapid fire damage +20%";
+
         public RapidFireUp(int value) : base(value)
         {
         }
@@ -23,13 +29,5 @@ namespace MHR___Ass.Data.Skills.SkillList
 
             return tmp;
         }
-
-        public override int MaxValue { get; set; } = 3;
-        public override string Description { get; set; } = @"
-Improves light bowgun rapid fire.
-1: Rapid fire damage +5%
-2: Rapid fire damage +10%
-3: Rapid fire damage +20%";
     }
- }
-            
+}

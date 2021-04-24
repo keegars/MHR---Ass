@@ -1,8 +1,12 @@
-
 namespace MHR___Ass.Data.Skills.SkillList
 {
     public class BowChargePlus : Skill
     {
+        public override int MaxValue { get; set; } = 1;
+        public override string Description { get; set; } = @"
+Increases max bow charge level by one.
+1: Activates skill effect.";
+
         public BowChargePlus(int value) : base(value)
         {
         }
@@ -23,11 +27,5 @@ namespace MHR___Ass.Data.Skills.SkillList
 
             return tmp;
         }
-
-        public override int MaxValue { get; set; } = 1;
-        public override string Description { get; set; } = @"
-Increases max bow charge level by one.
-1: Activates skill effect.";
     }
- }
-            
+}

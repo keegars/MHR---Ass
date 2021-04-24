@@ -5,7 +5,6 @@ namespace MHR___Ass.Data.Armors.Sets
         public Naked()
         {
             Name = "Naked";
-            
 
             //Base values
             BaseDefense = 0;

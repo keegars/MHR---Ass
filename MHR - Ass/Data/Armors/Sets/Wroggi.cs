@@ -7,7 +7,6 @@ namespace MHR___Ass.Data.Armors.Sets
         public Wroggi()
         {
             Name = "Wroggi";
-            
 
             //Base values
             BaseDefense = 16;

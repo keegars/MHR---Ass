@@ -1,8 +1,12 @@
-
 namespace MHR___Ass.Data.Skills.SkillList
 {
     public class LeapofFaith : Skill
     {
+        public override int MaxValue { get; set; } = 1;
+        public override string Description { get; set; } = @"
+Allows you to do a dive-evade when facing towards large monsters, and extends the dive-evade distance.
+1: Enables skill use.";
+
         public LeapofFaith(int value) : base(value)
         {
         }
@@ -23,11 +27,5 @@ namespace MHR___Ass.Data.Skills.SkillList
 
             return tmp;
         }
-
-        public override int MaxValue { get; set; } = 1;
-        public override string Description { get; set; } = @"
-Allows you to do a dive-evade when facing towards large monsters, and extends the dive-evade distance.
-1: Enables skill use.";
     }
- }
-            
+}

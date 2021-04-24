@@ -7,7 +7,6 @@ namespace MHR___Ass.Data.Armors.Sets
         public Skull()
         {
             Name = "Skull";
-            
 
             //Base values
             BaseDefense = 28;

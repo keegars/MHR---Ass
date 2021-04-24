@@ -1,8 +1,14 @@
-
 namespace MHR___Ass.Data.Skills.SkillList
 {
     public class SleepAttack : Skill
     {
+        public override int MaxValue { get; set; } = 3;
+        public override string Description { get; set; } = @"
+Increases sleep element attack power. (Elemental attack power has a maximum limit.)
+1: Sleep buildup +5% Bonus: +1
+2: Sleep buildup +10% Bonus: +2
+3: Sleep buildup +20% Bonus: +5";
+
         public SleepAttack(int value) : base(value)
         {
         }
@@ -23,13 +29,5 @@ namespace MHR___Ass.Data.Skills.SkillList
 
             return tmp;
         }
-
-        public override int MaxValue { get; set; } = 3;
-        public override string Description { get; set; } = @"
-Increases sleep element attack power. (Elemental attack power has a maximum limit.)
-1: Sleep buildup +5% Bonus: +1
-2: Sleep buildup +10% Bonus: +2
-3: Sleep buildup +20% Bonus: +5";
     }
- }
-            
+}

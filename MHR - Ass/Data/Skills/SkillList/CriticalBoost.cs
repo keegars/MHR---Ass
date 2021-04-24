@@ -1,8 +1,14 @@
-
 namespace MHR___Ass.Data.Skills.SkillList
 {
     public class CriticalBoost : Skill
     {
+        public override int MaxValue { get; set; } = 3;
+        public override string Description { get; set; } = @"
+Increases the damage of critical hits.
+1: Increases damage dealt by critical hits to 30%.
+2: Increases damage dealt by critical hits to 35%.
+3: Increases damage dealt by critical hits to 40%.";
+
         public CriticalBoost(int value) : base(value)
         {
         }
@@ -23,13 +29,5 @@ namespace MHR___Ass.Data.Skills.SkillList
 
             return tmp;
         }
-
-        public override int MaxValue { get; set; } = 3;
-        public override string Description { get; set; } = @"
-Increases the damage of critical hits.
-1: Increases damage dealt by critical hits to 30%.
-2: Increases damage dealt by critical hits to 35%.
-3: Increases damage dealt by critical hits to 40%.";
     }
- }
-            
+}

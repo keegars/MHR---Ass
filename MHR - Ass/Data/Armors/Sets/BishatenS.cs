@@ -8,7 +8,7 @@ namespace MHR___Ass.Data.Armors.Sets
         public BishatenS()
         {
             Name = "Bishaten S";
-            
+
             ArmorRank = ArmorRank.High;
 
             //Base values

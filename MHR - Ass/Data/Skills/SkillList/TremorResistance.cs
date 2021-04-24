@@ -1,8 +1,14 @@
-
 namespace MHR___Ass.Data.Skills.SkillList
 {
     public class TremorResistance : Skill
     {
+        public override int MaxValue { get; set; } = 3;
+        public override string Description { get; set; } = @"
+Grants protection against ground tremors.
+1: Nullifies minor ground tremors.
+2: Nullifies minor ground tremors and reduces the effects of major ground tremors.
+3: Nullifies minor and major ground tremors.";
+
         public TremorResistance(int value) : base(value)
         {
         }
@@ -23,13 +29,5 @@ namespace MHR___Ass.Data.Skills.SkillList
 
             return tmp;
         }
-
-        public override int MaxValue { get; set; } = 3;
-        public override string Description { get; set; } = @"
-Grants protection against ground tremors.
-1: Nullifies minor ground tremors.
-2: Nullifies minor ground tremors and reduces the effects of major ground tremors.
-3: Nullifies minor and major ground tremors.";
     }
- }
-            
+}

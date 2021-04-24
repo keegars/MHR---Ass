@@ -1,8 +1,14 @@
-
 namespace MHR___Ass.Data.Skills.SkillList
 {
     public class SleepResistance : Skill
     {
+        public override int MaxValue { get; set; } = 3;
+        public override string Description { get; set; } = @"
+Reduces the duration of sleep.
+1: Reduces the duration of sleep by 30%.
+2: Reduces the duration of sleep by 60%.
+3: Prevents sleep.";
+
         public SleepResistance(int value) : base(value)
         {
         }
@@ -23,13 +29,5 @@ namespace MHR___Ass.Data.Skills.SkillList
 
             return tmp;
         }
-
-        public override int MaxValue { get; set; } = 3;
-        public override string Description { get; set; } = @"
-Reduces the duration of sleep.
-1: Reduces the duration of sleep by 30%.
-2: Reduces the duration of sleep by 60%.
-3: Prevents sleep.";
     }
- }
-            
+}

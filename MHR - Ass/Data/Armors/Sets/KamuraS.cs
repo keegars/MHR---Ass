@@ -8,7 +8,7 @@ namespace MHR___Ass.Data.Armors.Sets
         public KamuraS()
         {
             Name = "Kamura S";
-            
+
             ArmorRank = ArmorRank.High;
 
             //Base values

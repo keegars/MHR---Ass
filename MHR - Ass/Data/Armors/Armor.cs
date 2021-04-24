@@ -42,7 +42,6 @@ namespace MHR___Ass.Data.Armors
                 TryAdd(_Skills, Skill2);
                 TryAdd(_Skills, Skill3);
                 TryAdd(_Skills, Skill4);
-
             }
 
             return _Skills;
@@ -56,18 +55,10 @@ namespace MHR___Ass.Data.Armors
 
                 TryAdd(_Slots, Slot1);
                 TryAdd(_Slots, Slot2);
-                TryAdd(_Slots, Slot3);             
+                TryAdd(_Slots, Slot3);
             }
 
             return _Slots;
-        }
-
-        private void TryAdd<T>(HashSet<T> hashset, T value)
-        {
-            if (value != null)
-            {
-                hashset.Add(value);
-            }
         }
 
         public void EmptyPopulatedSlots()
@@ -104,18 +95,7 @@ namespace MHR___Ass.Data.Armors
                 }
             }
 
-            return true;          
-        }
-
-        private bool PopulateSlotDecoration(Slot slot, Decoration decoration)
-        {
-            if (slot != null && decoration.IsSlotCompatible(slot.Type) && slot.Decoration == null)
-            {
-                slot.Decoration = decoration;
-                return true;
-            }
-
-            return false;
+            return true;
         }
 
         public int HasSlotTypeCount(SlotType slotType)
@@ -341,6 +321,25 @@ namespace MHR___Ass.Data.Armors
             return this;
         }
 
+        private void TryAdd<T>(HashSet<T> hashset, T value)
+        {
+            if (value != null)
+            {
+                hashset.Add(value);
+            }
+        }
+
+        private bool PopulateSlotDecoration(Slot slot, Decoration decoration)
+        {
+            if (slot != null && decoration.IsSlotCompatible(slot.Type) && slot.Decoration == null)
+            {
+                slot.Decoration = decoration;
+                return true;
+            }
+
+            return false;
+        }
+
         private List<string> GetSkillNames()
         {
             return GetSkills().Select(z => z.Name).Distinct().ToList();
@@ -401,7 +400,7 @@ namespace MHR___Ass.Data.Armors
                     var newArmor = armor.DeepClone();
 
                     if (slot == 1)
-                    {                        
+                    {
                         newArmor.Slot1.Decoration = decoration;
                     }
                     else if (slot == 2)

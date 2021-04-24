@@ -8,7 +8,7 @@ namespace MHR___Ass.Data.Armors.Sets
         public BnahabraS()
         {
             Name = "Bnahabra S";
-            
+
             ArmorRank = ArmorRank.High;
 
             //Base values

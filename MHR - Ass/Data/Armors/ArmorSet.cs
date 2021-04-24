@@ -34,7 +34,6 @@ namespace MHR___Ass.Data.Armors
 
         public ArmorSet()
         {
-           
         }
 
         public ArmorSet(Armor head = null, Armor torso = null, Armor arm = null, Armor waist = null, Armor leg = null, List<Slot> weaponSlots = null, Charm charm = null)
@@ -51,7 +50,7 @@ namespace MHR___Ass.Data.Armors
 
         public void EmptyWeaponSlots()
         {
-            foreach(var slot in _WeaponSlots)
+            foreach (var slot in _WeaponSlots)
             {
                 slot.Decoration = null;
             }
@@ -85,7 +84,7 @@ namespace MHR___Ass.Data.Armors
                  (Arm?.HasSlotTypeCount(slotType) ?? 0) +
                  (Waist?.HasSlotTypeCount(slotType) ?? 0) +
                  (Leg?.HasSlotTypeCount(slotType) ?? 0) +
-                 (_WeaponSlots?.Count(z=> z.Type == slotType) ?? 0) + 
+                 (_WeaponSlots?.Count(z => z.Type == slotType) ?? 0) +
                  (Charm?.HasSlotTypeCount(slotType) ?? 0);
         }
 
@@ -147,7 +146,7 @@ namespace MHR___Ass.Data.Armors
                 TryAddRange(totals, weaponSlots);
                 TryAddRange(totals, charmSlots);
 
-                _SlotTotals =  totals;
+                _SlotTotals = totals;
             }
 
             return _SlotTotals;
@@ -171,7 +170,6 @@ namespace MHR___Ass.Data.Armors
                 var mediumParsed = slotTotals.TryGetValue("Medium Slot", out var medium);
                 var largeParsed = slotTotals.TryGetValue("Large Slot", out var large);
 
-
                 if (smallParsed)
                 {
                     slotCombos.Add(new SlotCombo(small));
@@ -181,9 +179,6 @@ namespace MHR___Ass.Data.Armors
                 {
                     slotCombos.Add(new SlotCombo(small + medium));
                     slotCombos.Add(new SlotCombo(small, medium));
-
-
-
                 }
 
                 if (largeParsed)
@@ -192,15 +187,13 @@ namespace MHR___Ass.Data.Armors
                     slotCombos.Add(new SlotCombo(small, medium + large));
                     slotCombos.Add(new SlotCombo(small, medium, large));
                 }
-
             }
-
 
             return slotCombos;
         }
 
         public void TryPopulateSlot(Decoration decoration, SlotCombo slotCombo)
-        {      
+        {
             for (var i = 1; i <= slotCombo.Large + slotCombo.Medium + slotCombo.Small; i++)
             {
                 if (Head?.PopulateSlot(decoration) == false)
@@ -219,7 +212,6 @@ namespace MHR___Ass.Data.Armors
                                         {
                                             throw new System.Exception("Couldn't add decoration!");
                                         }
-                                       
                                     }
                                 }
                             }
@@ -227,9 +219,7 @@ namespace MHR___Ass.Data.Armors
                     }
                 }
             }
-                    
         }
-
 
         public int GetTotalDefense()
         {
@@ -246,7 +236,6 @@ namespace MHR___Ass.Data.Armors
                 (_WeaponSlots?.Count(z => z.Decoration == null) ?? 0) +
                 (Charm?.GetEmptySlotsCount() ?? 0);
         }
-
 
         public List<Slot> GetWeaponSlots()
         {

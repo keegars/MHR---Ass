@@ -7,7 +7,6 @@ namespace MHR___Ass.Data.Armors.Sets
         public UtsushiVisible()
         {
             Name = "Utsushi (Visible)";
-            
 
             //Base values
             BaseDefense = 24;

@@ -8,7 +8,7 @@ namespace MHR___Ass.Data.Armors.Sets
         public MelahoaS()
         {
             Name = "Melahoa S";
-            
+
             ArmorRank = ArmorRank.High;
 
             //Base values

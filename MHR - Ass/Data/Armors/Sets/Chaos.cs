@@ -7,7 +7,6 @@ namespace MHR___Ass.Data.Armors.Sets
         public Chaos()
         {
             Name = "Chaos";
-            
 
             //Base values
             BaseDefense = 12;

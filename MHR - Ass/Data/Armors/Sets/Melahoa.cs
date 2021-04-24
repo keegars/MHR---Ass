@@ -7,7 +7,6 @@ namespace MHR___Ass.Data.Armors.Sets
         public Melahoa()
         {
             Name = "Melahoa";
-            
 
             //Base values
             BaseDefense = 18;

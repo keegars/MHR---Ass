@@ -1,8 +1,14 @@
-
 namespace MHR___Ass.Data.Skills.SkillList
 {
     public class WirebugWhisperer : Skill
     {
+        public override int MaxValue { get; set; } = 3;
+        public override string Description { get; set; } = @"
+Improves your handling of Wirebugs.
+1: Extends the duration you can keep a Wirebug by 30%.
+2: Further increases passive Wirebug recovery rate.
+3: Further increases passive recovery rate while on the ground.";
+
         public WirebugWhisperer(int value) : base(value)
         {
         }
@@ -23,13 +29,5 @@ namespace MHR___Ass.Data.Skills.SkillList
 
             return tmp;
         }
-
-        public override int MaxValue { get; set; } = 3;
-        public override string Description { get; set; } = @"
-Improves your handling of Wirebugs.
-1: Extends the duration you can keep a Wirebug by 30%.
-2: Further increases passive Wirebug recovery rate.
-3: Further increases passive recovery rate while on the ground.";
     }
- }
-            
+}

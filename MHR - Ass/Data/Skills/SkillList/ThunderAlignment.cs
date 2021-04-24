@@ -1,8 +1,16 @@
-
 namespace MHR___Ass.Data.Skills.SkillList
 {
     public class ThunderAlignment : Skill
     {
+        public override int MaxValue { get; set; } = 5;
+        public override string Description { get; set; } = @"
+Gain the power of the elder dragon Thunder Serpent Narwa.
+1: Thunder resistance +1
+2: Thunder resistance +2
+3: Thunder resistance +3
+4: Thunder resistance +4
+5: Also grants the effect Fortunate.";
+
         public ThunderAlignment(int value) : base(value)
         {
         }
@@ -23,15 +31,5 @@ namespace MHR___Ass.Data.Skills.SkillList
 
             return tmp;
         }
-
-        public override int MaxValue { get; set; } = 5;
-        public override string Description { get; set; } = @"
-Gain the power of the elder dragon Thunder Serpent Narwa.
-1: Thunder resistance +1
-2: Thunder resistance +2
-3: Thunder resistance +3
-4: Thunder resistance +4
-5: Also grants the effect Fortunate.";
     }
- }
-            
+}

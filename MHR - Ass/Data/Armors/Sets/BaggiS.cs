@@ -8,7 +8,7 @@ namespace MHR___Ass.Data.Armors.Sets
         public BaggiS()
         {
             Name = "Baggi S";
-            
+
             ArmorRank = ArmorRank.High;
 
             //Base values

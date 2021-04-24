@@ -7,7 +7,6 @@ namespace MHR___Ass.Data.Armors.Sets
         public Shell_Studded()
         {
             Name = "Shell-Studded";
-            
 
             //Base values
             BaseDefense = 12;

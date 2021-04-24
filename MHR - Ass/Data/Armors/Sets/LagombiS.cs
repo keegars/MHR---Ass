@@ -8,7 +8,7 @@ namespace MHR___Ass.Data.Armors.Sets
         public LagombiS()
         {
             Name = "Lagombi S";
-            
+
             ArmorRank = ArmorRank.High;
 
             //Base values

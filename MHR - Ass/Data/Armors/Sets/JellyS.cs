@@ -8,9 +8,8 @@ namespace MHR___Ass.Data.Armors.Sets
         public JellyS()
         {
             Name = "Jelly S";
-            
-            ArmorRank = ArmorRank.High;
 
+            ArmorRank = ArmorRank.High;
 
             //Base values
             BaseDefense = 62;

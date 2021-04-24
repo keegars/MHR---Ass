@@ -7,7 +7,7 @@ namespace MHR___Ass.Data.Armors.Sets
         public GargwaMaskS()
         {
             Name = "Gargwa Mask S";
-            
+
             ArmorRank = ArmorRank.High;
 
             //Base values

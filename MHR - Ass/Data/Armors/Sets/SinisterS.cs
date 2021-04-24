@@ -8,7 +8,7 @@ namespace MHR___Ass.Data.Armors.Sets
         public SinisterS()
         {
             Name = "Sinister S";
-            
+
             ArmorRank = ArmorRank.High;
 
             //Base values

@@ -7,7 +7,7 @@ namespace MHR___Ass.Data.Armors.Sets
         public Narwa()
         {
             Name = "Narwa";
-            
+
             ArmorRank = ArmorRank.High;
 
             //Base values

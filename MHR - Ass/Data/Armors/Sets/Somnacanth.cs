@@ -7,7 +7,6 @@ namespace MHR___Ass.Data.Armors.Sets
         public Somnacanth()
         {
             Name = "Somnacanth";
-            
 
             //Base values
             BaseDefense = 22;

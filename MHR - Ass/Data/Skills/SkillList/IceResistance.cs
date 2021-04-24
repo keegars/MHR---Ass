@@ -1,8 +1,14 @@
-
 namespace MHR___Ass.Data.Skills.SkillList
 {
     public class IceResistance : Skill
     {
+        public override int MaxValue { get; set; } = 3;
+        public override string Description { get; set; } = @"
+Increases ice resistance. Also improves defense at higher levels.
+1: Ice resistance +6
+2: Ice resistance +12
+3: Ice resistance +20 Defense +10";
+
         public IceResistance(int value) : base(value)
         {
         }
@@ -23,13 +29,5 @@ namespace MHR___Ass.Data.Skills.SkillList
 
             return tmp;
         }
-
-        public override int MaxValue { get; set; } = 3;
-        public override string Description { get; set; } = @"
-Increases ice resistance. Also improves defense at higher levels.
-1: Ice resistance +6
-2: Ice resistance +12
-3: Ice resistance +20 Defense +10";
     }
- }
-            
+}

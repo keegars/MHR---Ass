@@ -8,7 +8,7 @@ namespace MHR___Ass.Data.Armors.Sets
         public LeatherS()
         {
             Name = "Leather S";
-            
+
             ArmorRank = ArmorRank.High;
 
             //Base values

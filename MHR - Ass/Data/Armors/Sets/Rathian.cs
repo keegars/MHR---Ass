@@ -7,7 +7,6 @@ namespace MHR___Ass.Data.Armors.Sets
         public Rathian()
         {
             Name = "Rathian";
-            
 
             //Base values
             BaseDefense = 22;

@@ -7,7 +7,6 @@ namespace MHR___Ass.Data.Armors.Sets
         public Kulu()
         {
             Name = "Kulu";
-            
 
             //Base values
             BaseDefense = 16;

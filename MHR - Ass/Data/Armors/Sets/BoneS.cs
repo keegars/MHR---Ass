@@ -8,7 +8,7 @@ namespace MHR___Ass.Data.Armors.Sets
         public BoneS()
         {
             Name = "Bone S";
-            
+
             ArmorRank = ArmorRank.High;
 
             //Base values

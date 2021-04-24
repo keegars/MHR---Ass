@@ -7,7 +7,6 @@ namespace MHR___Ass.Data.Armors.Sets
         public Kadachi()
         {
             Name = "Kadachi";
-            
 
             //Base values
             BaseDefense = 20;

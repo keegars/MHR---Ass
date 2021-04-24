@@ -1,8 +1,14 @@
-
 namespace MHR___Ass.Data.Skills.SkillList
 {
     public class ProtectivePolish : Skill
     {
+        public override int MaxValue { get; set; } = 3;
+        public override string Description { get; set; } = @"
+Weapon sharpness does not decrease for a set time after sharpening.
+1: Effect lasts 30 seconds.
+2: Effect lasts 60 seconds.
+3: Effect lasts 90 seconds.";
+
         public ProtectivePolish(int value) : base(value)
         {
         }
@@ -23,13 +29,5 @@ namespace MHR___Ass.Data.Skills.SkillList
 
             return tmp;
         }
-
-        public override int MaxValue { get; set; } = 3;
-        public override string Description { get; set; } = @"
-Weapon sharpness does not decrease for a set time after sharpening.
-1: Effect lasts 30 seconds.
-2: Effect lasts 60 seconds.
-3: Effect lasts 90 seconds.";
     }
- }
-            
+}

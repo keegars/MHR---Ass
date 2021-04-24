@@ -7,7 +7,6 @@ namespace MHR___Ass.Data.Armors.Sets
         public Diablos()
         {
             Name = "Diablos";
-            
 
             //Base values
             BaseDefense = 30;

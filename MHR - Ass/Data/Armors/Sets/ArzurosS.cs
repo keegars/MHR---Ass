@@ -8,7 +8,7 @@ namespace MHR___Ass.Data.Armors.Sets
         public ArzurosS()
         {
             Name = "Arzuros S";
-            
+
             ArmorRank = ArmorRank.High;
 
             //Base values

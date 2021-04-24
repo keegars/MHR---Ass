@@ -7,7 +7,6 @@ namespace MHR___Ass.Data.Armors.Sets
         public Anja()
         {
             Name = "Anja";
-            
 
             //Base values
             BaseDefense = 26;

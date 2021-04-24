@@ -8,7 +8,7 @@ namespace MHR___Ass.Data.Armors.Sets
         public LudrothS()
         {
             Name = "Ludroth S";
-            
+
             ArmorRank = ArmorRank.High;
 
             //Base values

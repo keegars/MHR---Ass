@@ -8,7 +8,7 @@ namespace MHR___Ass.Data.Armors.Sets
         public RemobraS()
         {
             Name = "Remobra S";
-            
+
             ArmorRank = ArmorRank.High;
 
             //Base values

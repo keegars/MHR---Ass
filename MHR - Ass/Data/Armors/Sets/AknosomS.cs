@@ -8,7 +8,7 @@ namespace MHR___Ass.Data.Armors.Sets
         public AknosomS()
         {
             Name = "Aknosom S";
-            
+
             ArmorRank = ArmorRank.High;
 
             //Base values

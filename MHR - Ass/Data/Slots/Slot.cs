@@ -46,9 +46,11 @@ namespace MHR___Ass.Data.Slots
 
     public class SlotCombo
     {
+        public int Small { get; set; }
+        public int Medium { get; set; }
+        public int Large { get; set; }
         public SlotCombo()
         {
-
         }
 
         public SlotCombo(int small = 0, int medium = 0, int large = 0)
@@ -57,9 +59,5 @@ namespace MHR___Ass.Data.Slots
             Medium = medium;
             Large = large;
         }
-
-        public int Small { get; set; }
-        public int Medium { get; set; }
-        public int Large { get; set; }
     }
 }

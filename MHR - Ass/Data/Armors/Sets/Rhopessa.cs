@@ -7,7 +7,6 @@ namespace MHR___Ass.Data.Armors.Sets
         public Rhopessa()
         {
             Name = "Rhopessa/Aelucanth";
-            
 
             //Base values
             BaseDefense = 24;

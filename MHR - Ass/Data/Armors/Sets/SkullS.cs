@@ -8,9 +8,8 @@ namespace MHR___Ass.Data.Armors.Sets
         public SkullS()
         {
             Name = "Skull S";
-            
-            ArmorRank = ArmorRank.High;
 
+            ArmorRank = ArmorRank.High;
 
             //Base values
             BaseDefense = 50;

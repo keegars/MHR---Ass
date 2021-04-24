@@ -7,7 +7,7 @@ namespace MHR___Ass.Data.Armors.Sets
         public MightyBowFeather()
         {
             Name = "Mighty Bow Feather";
-            
+
             ArmorRank = ArmorRank.High;
 
             //Base values

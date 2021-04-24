@@ -1,8 +1,14 @@
-
 namespace MHR___Ass.Data.Skills.SkillList
 {
     public class StaminaSurge : Skill
     {
+        public override int MaxValue { get; set; } = 3;
+        public override string Description { get; set; } = @"
+Speeds up stamina recovery.
+1: Stamina recovery speed +10%
+2: Stamina recovery speed +20%
+3: Stamina recovery speed +40%";
+
         public StaminaSurge(int value) : base(value)
         {
         }
@@ -23,13 +29,5 @@ namespace MHR___Ass.Data.Skills.SkillList
 
             return tmp;
         }
-
-        public override int MaxValue { get; set; } = 3;
-        public override string Description { get; set; } = @"
-Speeds up stamina recovery.
-1: Stamina recovery speed +10%
-2: Stamina recovery speed +20%
-3: Stamina recovery speed +40%";
     }
- }
-            
+}

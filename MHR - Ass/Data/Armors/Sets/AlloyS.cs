@@ -8,7 +8,7 @@ namespace MHR___Ass.Data.Armors.Sets
         public AlloyS()
         {
             Name = "Alloy S";
-            
+
             ArmorRank = ArmorRank.High;
 
             //Base values

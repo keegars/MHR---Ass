@@ -7,7 +7,6 @@ namespace MHR___Ass.Data.Armors.Sets
         public Remobra()
         {
             Name = "Remobra";
-            
 
             //Base values
             BaseDefense = 18;

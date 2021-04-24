@@ -7,7 +7,6 @@ namespace MHR___Ass.Data.Armors.Sets
         public Almudron()
         {
             Name = "Almudron";
-            
 
             //Base values
             BaseDefense = 30;

@@ -7,7 +7,6 @@ namespace MHR___Ass.Data.Armors.Sets
         public Uroktor()
         {
             Name = "Uroktor";
-            
 
             //Base values
             BaseDefense = 18;

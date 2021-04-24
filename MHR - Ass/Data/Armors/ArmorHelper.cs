@@ -1,6 +1,5 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
-using Force.DeepCloner;
 using MHR___Ass.Data.Armors.Sets;
 using MHR___Ass.Data.Charms;
 using MHR___Ass.Data.Decorations;
@@ -96,15 +95,14 @@ namespace MHR___Ass.Data.Armors
                     return armors.OrderByDescending(z => z.GetTotalResistance(ResistanceType.Dragon));
             }
 
-             return armors.OrderByDescending(z => z.GetFreeSlots());
+            return armors.OrderByDescending(z => z.GetFreeSlots());
         }
 
         public static Dictionary<string, int> GetSkillTotals(this List<Slot> slots)
         {
-
             var totals = new Dictionary<string, int>();
 
-            foreach(var slot in slots)
+            foreach (var slot in slots)
             {
                 if (slot != null && slot.Decoration != null)
                 {
@@ -122,12 +120,10 @@ namespace MHR___Ass.Data.Armors
             }
 
             return totals;
-           
         }
 
         public static Dictionary<string, int> GetSkillTotals(this Charm charm, bool refresh = false)
         {
-
             var totals = new Dictionary<string, int>();
 
             foreach (var skill in charm.GetSkills(refresh))
@@ -162,10 +158,7 @@ namespace MHR___Ass.Data.Armors
             }
 
             return totals;
-
         }
-
-
 
         public static void AddNakedArmor(HashSet<Armor> headArmor, HashSet<Armor> torsoArmor, HashSet<Armor> armArmor, HashSet<Armor> waistArmor, HashSet<Armor> legArmor)
         {
@@ -217,7 +210,7 @@ namespace MHR___Ass.Data.Armors
 
         public static bool PopulateSlot(this List<Slot> slotList, Decoration decoration)
         {
-            foreach(var slot in slotList)
+            foreach (var slot in slotList)
             {
                 if (slot != null && decoration.IsSlotCompatible(slot.Type) && slot.Decoration == null)
                 {
@@ -248,7 +241,20 @@ namespace MHR___Ass.Data.Armors
             }
 
             return true;
+        }
 
+        public static int HasSlotTypeCount(this Charm charm, SlotType slotType)
+        {
+            if (charm == null)
+            {
+                return 0;
+            }
+            else
+            {
+                return (charm?.Slot1?.Type == slotType ? 1 : 0) +
+                    (charm?.Slot2?.Type == slotType ? 1 : 0) +
+                    (charm?.Slot3?.Type == slotType ? 1 : 0);
+            }
         }
 
         private static bool PopulateSlotDecoration(Slot slot, Decoration decoration)
@@ -260,20 +266,6 @@ namespace MHR___Ass.Data.Armors
             }
 
             return false;
-        }
-
-        public static int HasSlotTypeCount(this Charm charm, SlotType slotType)
-        {
-            if (charm == null )
-            {
-                return 0;
-            }
-            else
-            {
-                return (charm?.Slot1?.Type == slotType ? 1 : 0) +
-                    (charm?.Slot2?.Type == slotType ? 1 : 0) +
-                    (charm?.Slot3?.Type == slotType ? 1 : 0);
-            }
         }
     }
 

@@ -8,7 +8,7 @@ namespace MHR___Ass.Data.Armors.Sets
         public BullfangoMaskS()
         {
             Name = "Bullfango Mask S";
-            
+
             ArmorRank = ArmorRank.High;
 
             //Base values

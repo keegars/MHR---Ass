@@ -1,8 +1,14 @@
-
 namespace MHR___Ass.Data.Skills.SkillList
 {
     public class RecoveryUp : Skill
     {
+        public override int MaxValue { get; set; } = 3;
+        public override string Description { get; set; } = @"
+Increases the amount recovered when restoring health.
+1: Slightly increases recovery.
+2: Increases recovery.
+3: Greatly increases recovery.";
+
         public RecoveryUp(int value) : base(value)
         {
         }
@@ -23,13 +29,5 @@ namespace MHR___Ass.Data.Skills.SkillList
 
             return tmp;
         }
-
-        public override int MaxValue { get; set; } = 3;
-        public override string Description { get; set; } = @"
-Increases the amount recovered when restoring health.
-1: Slightly increases recovery.
-2: Increases recovery.
-3: Greatly increases recovery.";
     }
- }
-            
+}

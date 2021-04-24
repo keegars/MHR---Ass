@@ -7,7 +7,6 @@ namespace MHR___Ass.Data.Armors.Sets
         public Pukei()
         {
             Name = "Pukei";
-            
 
             //Base values
             BaseDefense = 20;

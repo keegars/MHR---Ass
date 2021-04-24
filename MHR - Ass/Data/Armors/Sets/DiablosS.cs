@@ -8,7 +8,7 @@ namespace MHR___Ass.Data.Armors.Sets
         public DiablosS()
         {
             Name = "Diablos S";
-            
+
             ArmorRank = ArmorRank.High;
 
             //Base values

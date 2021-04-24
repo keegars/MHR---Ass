@@ -7,7 +7,6 @@ namespace MHR___Ass.Data.Armors.Sets
         public Mosgharl()
         {
             Name = "Mosgharl";
-            
 
             //Base values
             BaseDefense = 18;

@@ -9,7 +9,6 @@ namespace MHR___Ass.Data.Armors.Sets
         {
             Name = "Jyura";
             ArmorRank = ArmorRank.High;
-            
 
             //Base values
             BaseDefense = 48;

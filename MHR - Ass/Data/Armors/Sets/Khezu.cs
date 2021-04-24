@@ -7,7 +7,6 @@ namespace MHR___Ass.Data.Armors.Sets
         public Khezu()
         {
             Name = "Khezu";
-            
 
             //Base values
             BaseDefense = 16;
