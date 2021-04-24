@@ -1,0 +1,613 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\Costura.Fody.5.3.0\build\Costura.Fody.props" Condition="Exists('..\packages\Costura.Fody.5.3.0\build\Costura.Fody.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{02701EC8-6135-4987-A44A-6370E709727B}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>MHR___Ass</RootNamespace>
+    <AssemblyName>MHR - Ass</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+    <LangVersion>latest</LangVersion>
+    <Nullable>enable</Nullable>
+    <NullableContextOptions>enable</NullableContextOptions>
+    <TargetFrameworkProfile />
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <LangVersion>latest</LangVersion>
+    <Nullable>enable</Nullable>
+    <NullableContextOptions>enable</NullableContextOptions>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <LangVersion>latest</LangVersion>
+    <Nullable>enable</Nullable>
+    <NullableContextOptions>enable</NullableContextOptions>
+    <WarningLevel>4</WarningLevel>
+    <GenerateSerializationAssemblies>Off</GenerateSerializationAssemblies>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Costura, Version=5.3.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Costura.Fody.5.3.0\lib\netstandard1.0\Costura.dll</HintPath>
+    </Reference>
+    <Reference Include="DeepCloner, Version=0.10.0.0, Culture=neutral, PublicKeyToken=dc0b95cf99bf4e99, processorArchitecture=MSIL">
+      <HintPath>..\packages\DeepCloner.0.10.2\lib\net40\DeepCloner.dll</HintPath>
+    </Reference>
+    <Reference Include="Humanizer, Version=2.8.0.0, Culture=neutral, PublicKeyToken=979442b78dfc278e, processorArchitecture=MSIL">
+      <HintPath>..\packages\Humanizer.Core.2.8.26\lib\netstandard2.0\Humanizer.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform, Version=3.6.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.3.6.0\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Win32.Primitives, Version=4.0.2.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Win32.Primitives.4.3.0\lib\net46\Microsoft.Win32.Primitives.dll</HintPath>
+      <Private>True</Private>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.AppContext, Version=4.1.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.AppContext.4.3.0\lib\net463\System.AppContext.dll</HintPath>
+      <Private>True</Private>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Buffers, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Buffers.4.5.1\lib\net461\System.Buffers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.ComponentModel.Composition" />
+    <Reference Include="System.Console, Version=4.0.1.1, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Console.4.3.1\lib\net46\System.Console.dll</HintPath>
+      <Private>True</Private>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Core" />
+    <Reference Include="System.Diagnostics.DiagnosticSource, Version=5.0.0.1, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Diagnostics.DiagnosticSource.5.0.1\lib\net46\System.Diagnostics.DiagnosticSource.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Diagnostics.Tracing, Version=4.1.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Diagnostics.Tracing.4.3.0\lib\net462\System.Diagnostics.Tracing.dll</HintPath>
+      <Private>True</Private>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Globalization.Calendars, Version=4.0.2.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Globalization.Calendars.4.3.0\lib\net46\System.Globalization.Calendars.dll</HintPath>
+      <Private>True</Private>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.IO, Version=4.1.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.IO.4.3.0\lib\net462\System.IO.dll</HintPath>
+      <Private>True</Private>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.IO.Compression, Version=4.1.2.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.IO.Compression.4.3.0\lib\net46\System.IO.Compression.dll</HintPath>
+      <Private>True</Private>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.IO.Compression.FileSystem" />
+    <Reference Include="System.IO.Compression.ZipFile, Version=4.0.2.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.IO.Compression.ZipFile.4.3.0\lib\net46\System.IO.Compression.ZipFile.dll</HintPath>
+      <Private>True</Private>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.IO.FileSystem, Version=4.0.2.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.IO.FileSystem.4.3.0\lib\net46\System.IO.FileSystem.dll</HintPath>
+      <Private>True</Private>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.IO.FileSystem.Primitives, Version=4.0.2.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.IO.FileSystem.Primitives.4.3.0\lib\net46\System.IO.FileSystem.Primitives.dll</HintPath>
+      <Private>True</Private>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Linq, Version=4.1.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Linq.4.3.0\lib\net463\System.Linq.dll</HintPath>
+      <Private>True</Private>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Linq.Expressions, Version=4.1.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Linq.Expressions.4.3.0\lib\net463\System.Linq.Expressions.dll</HintPath>
+      <Private>True</Private>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Memory, Version=4.0.1.1, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Memory.4.5.4\lib\net461\System.Memory.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http, Version=4.1.1.3, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Net.Http.4.3.4\lib\net46\System.Net.Http.dll</HintPath>
+      <Private>True</Private>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Net.Sockets, Version=4.1.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Net.Sockets.4.3.0\lib\net46\System.Net.Sockets.dll</HintPath>
+      <Private>True</Private>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Numerics" />
+    <Reference Include="System.Numerics.Vectors, Version=4.1.4.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Numerics.Vectors.4.5.0\lib\net46\System.Numerics.Vectors.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Reflection, Version=4.1.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Reflection.4.3.0\lib\net462\System.Reflection.dll</HintPath>
+      <Private>True</Private>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Runtime, Version=4.1.1.1, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Runtime.4.3.1\lib\net462\System.Runtime.dll</HintPath>
+      <Private>True</Private>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Runtime.CompilerServices.Unsafe, Version=5.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Runtime.CompilerServices.Unsafe.5.0.0\lib\net45\System.Runtime.CompilerServices.Unsafe.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime.Extensions, Version=4.1.1.1, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Runtime.Extensions.4.3.1\lib\net462\System.Runtime.Extensions.dll</HintPath>
+      <Private>True</Private>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Runtime.InteropServices, Version=4.1.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Runtime.InteropServices.4.3.0\lib\net463\System.Runtime.InteropServices.dll</HintPath>
+      <Private>True</Private>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Runtime.InteropServices.RuntimeInformation, Version=4.0.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Runtime.InteropServices.RuntimeInformation.4.3.0\lib\net45\System.Runtime.InteropServices.RuntimeInformation.dll</HintPath>
+      <Private>True</Private>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Security.Cryptography.Algorithms, Version=4.2.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Security.Cryptography.Algorithms.4.3.1\lib\net463\System.Security.Cryptography.Algorithms.dll</HintPath>
+      <Private>True</Private>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Security.Cryptography.Encoding, Version=4.0.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Security.Cryptography.Encoding.4.3.0\lib\net46\System.Security.Cryptography.Encoding.dll</HintPath>
+      <Private>True</Private>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Security.Cryptography.Primitives, Version=4.0.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Security.Cryptography.Primitives.4.3.0\lib\net46\System.Security.Cryptography.Primitives.dll</HintPath>
+      <Private>True</Private>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Security.Cryptography.X509Certificates, Version=4.1.1.2, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Security.Cryptography.X509Certificates.4.3.2\lib\net461\System.Security.Cryptography.X509Certificates.dll</HintPath>
+      <Private>True</Private>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Text.RegularExpressions, Version=4.1.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Text.RegularExpressions.4.3.1\lib\net463\System.Text.RegularExpressions.dll</HintPath>
+      <Private>True</Private>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Xml.ReaderWriter, Version=4.1.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Xml.ReaderWriter.4.3.1\lib\net46\System.Xml.ReaderWriter.dll</HintPath>
+      <Private>True</Private>
+      <Private>True</Private>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Data\Armors\ArmorRank.cs" />
+    <Compile Include="Data\Armors\ArmorSet.cs" />
+    <Compile Include="Data\Armors\ArmorType.cs" />
+    <Compile Include="Data\Armors\Armor.cs" />
+    <Compile Include="Data\Armors\ArmorHelper.cs" />
+    <Compile Include="Data\Armors\Rarity.cs" />
+    <Compile Include="Data\Armors\Sets\Aknosom.cs" />
+    <Compile Include="Data\Armors\Sets\AknosomS.cs" />
+    <Compile Include="Data\Armors\Sets\Alloy.cs" />
+    <Compile Include="Data\Armors\Sets\AlloyS.cs" />
+    <Compile Include="Data\Armors\Sets\Almudron.cs" />
+    <Compile Include="Data\Armors\Sets\AlmudronS.cs" />
+    <Compile Include="Data\Armors\Sets\Anja.cs" />
+    <Compile Include="Data\Armors\Sets\AnjaS.cs" />
+    <Compile Include="Data\Armors\Sets\Arzuros.cs" />
+    <Compile Include="Data\Armors\Sets\ArzurosS.cs" />
+    <Compile Include="Data\Armors\Sets\Baggi.cs" />
+    <Compile Include="Data\Armors\Sets\BaggiS.cs" />
+    <Compile Include="Data\Armors\Sets\Barioth.cs" />
+    <Compile Include="Data\Armors\Sets\BariothS.cs" />
+    <Compile Include="Data\Armors\Sets\Barroth.cs" />
+    <Compile Include="Data\Armors\Sets\BarrothS.cs" />
+    <Compile Include="Data\Armors\Sets\Basarios.cs" />
+    <Compile Include="Data\Armors\Sets\BasariosS.cs" />
+    <Compile Include="Data\Armors\Sets\Bishaten.cs" />
+    <Compile Include="Data\Armors\Sets\BishatenS.cs" />
+    <Compile Include="Data\Armors\Sets\Bnahabra.cs" />
+    <Compile Include="Data\Armors\Sets\BnahabraS.cs" />
+    <Compile Include="Data\Armors\Sets\Bone.cs" />
+    <Compile Include="Data\Armors\Sets\BoneS.cs" />
+    <Compile Include="Data\Armors\Sets\Brigade.cs" />
+    <Compile Include="Data\Armors\Sets\BrigadeS.cs" />
+    <Compile Include="Data\Armors\Sets\BullfangoMask.cs" />
+    <Compile Include="Data\Armors\Sets\BullfangoMaskS.cs" />
+    <Compile Include="Data\Armors\Sets\Chainmail.cs" />
+    <Compile Include="Data\Armors\Sets\ChainmailS.cs" />
+    <Compile Include="Data\Armors\Sets\Channeler.cs" />
+    <Compile Include="Data\Armors\Sets\ChannelerS.cs" />
+    <Compile Include="Data\Armors\Sets\Chaos.cs" />
+    <Compile Include="Data\Armors\Sets\ChaosS.cs" />
+    <Compile Include="Data\Armors\Sets\ChromeMetal.cs" />
+    <Compile Include="Data\Armors\Sets\DeathStench.cs" />
+    <Compile Include="Data\Armors\Sets\DeathStenchS.cs" />
+    <Compile Include="Data\Armors\Sets\Diablos.cs" />
+    <Compile Include="Data\Armors\Sets\DiablosS.cs" />
+    <Compile Include="Data\Armors\Sets\Dober.cs" />
+    <Compile Include="Data\Armors\Sets\Droth.cs" />
+    <Compile Include="Data\Armors\Sets\DrothS.cs" />
+    <Compile Include="Data\Armors\Sets\Edel.cs" />
+    <Compile Include="Data\Armors\Sets\EdelS.cs" />
+    <Compile Include="Data\Armors\Sets\GargwaMask.cs" />
+    <Compile Include="Data\Armors\Sets\GargwaMaskS.cs" />
+    <Compile Include="Data\Armors\Sets\Golden.cs" />
+    <Compile Include="Data\Armors\Sets\GossHarag.cs" />
+    <Compile Include="Data\Armors\Sets\GossHaragS.cs" />
+    <Compile Include="Data\Armors\Sets\Hunter.cs" />
+    <Compile Include="Data\Armors\Sets\HunterS.cs" />
+    <Compile Include="Data\Armors\Sets\Ibushi.cs" />
+    <Compile Include="Data\Armors\Sets\Ingot.cs" />
+    <Compile Include="Data\Armors\Sets\Naked.cs" />
+    <Compile Include="Data\Armors\Sets\IngotS.cs" />
+    <Compile Include="Data\Armors\Sets\Izuchi.cs" />
+    <Compile Include="Data\Armors\Sets\IzuchiS.cs" />
+    <Compile Include="Data\Armors\Sets\Jaggi.cs" />
+    <Compile Include="Data\Armors\Sets\JaggiMask.cs" />
+    <Compile Include="Data\Armors\Sets\JaggiMaskS.cs" />
+    <Compile Include="Data\Armors\Sets\JaggiS.cs" />
+    <Compile Include="Data\Armors\Sets\Jelly.cs" />
+    <Compile Include="Data\Armors\Sets\JellyS.cs" />
+    <Compile Include="Data\Armors\Sets\Jyura.cs" />
+    <Compile Include="Data\Armors\Sets\Kadachi.cs" />
+    <Compile Include="Data\Armors\Sets\KadachiS.cs" />
+    <Compile Include="Data\Armors\Sets\Kamura.cs" />
+    <Compile Include="Data\Armors\Sets\KamuraS.cs" />
+    <Compile Include="Data\Armors\Sets\Khezu.cs" />
+    <Compile Include="Data\Armors\Sets\KhezuS.cs" />
+    <Compile Include="Data\Armors\Sets\Kulu.cs" />
+    <Compile Include="Data\Armors\Sets\KuluS.cs" />
+    <Compile Include="Data\Armors\Sets\Lagombi.cs" />
+    <Compile Include="Data\Armors\Sets\LagombiS.cs" />
+    <Compile Include="Data\Armors\Sets\Leather.cs" />
+    <Compile Include="Data\Armors\Sets\LeatherS.cs" />
+    <Compile Include="Data\Armors\Sets\Ludroth.cs" />
+    <Compile Include="Data\Armors\Sets\LudrothS.cs" />
+    <Compile Include="Data\Armors\Sets\Makluva.cs" />
+    <Compile Include="Data\Armors\Sets\MakluvaS.cs" />
+    <Compile Include="Data\Armors\Sets\Medium.cs" />
+    <Compile Include="Data\Armors\Sets\MediumS.cs" />
+    <Compile Include="Data\Armors\Sets\Melahoa.cs" />
+    <Compile Include="Data\Armors\Sets\MelahoaS.cs" />
+    <Compile Include="Data\Armors\Sets\MightyBowFeather.cs" />
+    <Compile Include="Data\Armors\Sets\Mizutsune.cs" />
+    <Compile Include="Data\Armors\Sets\MizutsuneS.cs" />
+    <Compile Include="Data\Armors\Sets\Mosgharl.cs" />
+    <Compile Include="Data\Armors\Sets\MosgharlS.cs" />
+    <Compile Include="Data\Armors\Sets\Nargacuga.cs" />
+    <Compile Include="Data\Armors\Sets\NargacugaS.cs" />
+    <Compile Include="Data\Armors\Sets\Narwa.cs" />
+    <Compile Include="Data\Armors\Sets\Pukei.cs" />
+    <Compile Include="Data\Armors\Sets\PukeiS.cs" />
+    <Compile Include="Data\Armors\Sets\Rakna_Kadaki.cs" />
+    <Compile Include="Data\Armors\Sets\Rathalos.cs" />
+    <Compile Include="Data\Armors\Sets\RathalosS.cs" />
+    <Compile Include="Data\Armors\Sets\Rathian.cs" />
+    <Compile Include="Data\Armors\Sets\RathianS.cs" />
+    <Compile Include="Data\Armors\Sets\Remobra.cs" />
+    <Compile Include="Data\Armors\Sets\RemobraS.cs" />
+    <Compile Include="Data\Armors\Sets\Rhenoplos.cs" />
+    <Compile Include="Data\Armors\Sets\RhenoplosS.cs" />
+    <Compile Include="Data\Armors\Sets\Rhopessa.cs" />
+    <Compile Include="Data\Armors\Sets\RhopessaS.cs" />
+    <Compile Include="Data\Armors\Sets\Shell_Studded.cs" />
+    <Compile Include="Data\Armors\Sets\Shell_StuddedS.cs" />
+    <Compile Include="Data\Armors\Sets\Sinister.cs" />
+    <Compile Include="Data\Armors\Sets\SinisterS.cs" />
+    <Compile Include="Data\Armors\Sets\Skalda.cs" />
+    <Compile Include="Data\Armors\Sets\SkaldaS.cs" />
+    <Compile Include="Data\Armors\Sets\Skull.cs" />
+    <Compile Include="Data\Armors\Sets\SkullS.cs" />
+    <Compile Include="Data\Armors\Sets\Slagtoth.cs" />
+    <Compile Include="Data\Armors\Sets\SlagtothS.cs" />
+    <Compile Include="Data\Armors\Sets\Somnacanth.cs" />
+    <Compile Include="Data\Armors\Sets\SomnacanthS.cs" />
+    <Compile Include="Data\Armors\Sets\Tetranadon.cs" />
+    <Compile Include="Data\Armors\Sets\TetranadonS.cs" />
+    <Compile Include="Data\Armors\Sets\Tigrex.cs" />
+    <Compile Include="Data\Armors\Sets\TigrexS.cs" />
+    <Compile Include="Data\Armors\Sets\Uroktor.cs" />
+    <Compile Include="Data\Armors\Sets\UroktorS.cs" />
+    <Compile Include="Data\Armors\Sets\UtsushiVisible.cs" />
+    <Compile Include="Data\Armors\Sets\UtsushiVisibleS.cs" />
+    <Compile Include="Data\Armors\Sets\Vaik.cs" />
+    <Compile Include="Data\Armors\Sets\VaikS.cs" />
+    <Compile Include="Data\Armors\Sets\Volvidon.cs" />
+    <Compile Include="Data\Armors\Sets\VolvidonS.cs" />
+    <Compile Include="Data\Armors\Sets\Wroggi.cs" />
+    <Compile Include="Data\Armors\Sets\WroggiS.cs" />
+    <Compile Include="Data\Armors\Sets\Zinogre.cs" />
+    <Compile Include="Data\Armors\Sets\ZinogreS.cs" />
+    <Compile Include="Data\Charms\Charm.cs" />
+    <Compile Include="Data\Decorations\Decoration.cs" />
+    <Compile Include="Data\Decorations\DecorationList\AbsorberJewel1.cs" />
+    <Compile Include="Data\Decorations\DecorationList\AntiblastJewel1.cs" />
+    <Compile Include="Data\Decorations\DecorationList\AntidoteJewel1.cs" />
+    <Compile Include="Data\Decorations\DecorationList\AntiparaJewel1.cs" />
+    <Compile Include="Data\Decorations\DecorationList\ArtilleryJewel2.cs" />
+    <Compile Include="Data\Decorations\DecorationList\AttackJewel2.cs" />
+    <Compile Include="Data\Decorations\DecorationList\BlazeJewel1.cs" />
+    <Compile Include="Data\Decorations\DecorationList\BluntJewel2.cs" />
+    <Compile Include="Data\Decorations\DecorationList\BoltJewel1.cs" />
+    <Compile Include="Data\Decorations\DecorationList\BomberJewel1.cs" />
+    <Compile Include="Data\Decorations\DecorationList\BotanyJewel1.cs" />
+    <Compile Include="Data\Decorations\DecorationList\BraceJewel1.cs" />
+    <Compile Include="Data\Decorations\DecorationList\BubbleJewel2.cs" />
+    <Compile Include="Data\Decorations\DecorationList\CapacityJewel3.cs" />
+    <Compile Include="Data\Decorations\DecorationList\CarverJewel1.cs" />
+    <Compile Include="Data\Decorations\DecorationList\ChargerJewel2.cs" />
+    <Compile Include="Data\Decorations\DecorationList\CounterJewel2.cs" />
+    <Compile Include="Data\Decorations\DecorationList\CritElementJewel2.cs" />
+    <Compile Include="Data\Decorations\DecorationList\DefenseJewel1.cs" />
+    <Compile Include="Data\Decorations\DecorationList\DestroyerJewel2.cs" />
+    <Compile Include="Data\Decorations\DecorationList\DiveJewel1.cs" />
+    <Compile Include="Data\Decorations\DecorationList\DiversionJewel1.cs" />
+    <Compile Include="Data\Decorations\DecorationList\DragonJewel1.cs" />
+    <Compile Include="Data\Decorations\DecorationList\DragonResJewel1.cs" />
+    <Compile Include="Data\Decorations\DecorationList\DrainJewel1.cs" />
+    <Compile Include="Data\Decorations\DecorationList\DrawJewel3.cs" />
+    <Compile Include="Data\Decorations\DecorationList\EarplugJewel3.cs" />
+    <Compile Include="Data\Decorations\DecorationList\EnduringJewel2.cs" />
+    <Compile Include="Data\Decorations\DecorationList\EnhancerJewel2.cs" />
+    <Compile Include="Data\Decorations\DecorationList\EvasionJewel2.cs" />
+    <Compile Include="Data\Decorations\DecorationList\ExpertJewel2.cs" />
+    <Compile Include="Data\Decorations\DecorationList\FireResJewel1.cs" />
+    <Compile Include="Data\Decorations\DecorationList\FootingJewel2.cs" />
+    <Compile Include="Data\Decorations\DecorationList\FortitudeJewel2.cs" />
+    <Compile Include="Data\Decorations\DecorationList\FriendshipJewel2.cs" />
+    <Compile Include="Data\Decorations\DecorationList\FrostJewel1.cs" />
+    <Compile Include="Data\Decorations\DecorationList\FungiformJewel3.cs" />
+    <Compile Include="Data\Decorations\DecorationList\GambitJewel2.cs" />
+    <Compile Include="Data\Decorations\DecorationList\GeologyJewel1.cs" />
+    <Compile Include="Data\Decorations\DecorationList\GobblerJewel2.cs" />
+    <Compile Include="Data\Decorations\DecorationList\GrinderJewel1.cs" />
+    <Compile Include="Data\Decorations\DecorationList\GuardianJewel3.cs" />
+    <Compile Include="Data\Decorations\DecorationList\HungerlessJewel1.cs" />
+    <Compile Include="Data\Decorations\DecorationList\IceResJewel1.cs" />
+    <Compile Include="Data\Decorations\DecorationList\IronwallJewel2.cs" />
+    <Compile Include="Data\Decorations\DecorationList\JumpingJewel2.cs" />
+    <Compile Include="Data\Decorations\DecorationList\KOJewel2.cs" />
+    <Compile Include="Data\Decorations\DecorationList\MagazineJewel2.cs" />
+    <Compile Include="Data\Decorations\DecorationList\MedicineJewel2.cs" />
+    <Compile Include="Data\Decorations\DecorationList\MightyJewel2.cs" />
+    <Compile Include="Data\Decorations\DecorationList\MindsEyeJewel2.cs" />
+    <Compile Include="Data\Decorations\DecorationList\MuckJewel1.cs" />
+    <Compile Include="Data\Decorations\DecorationList\PepJewel1.cs" />
+    <Compile Include="Data\Decorations\DecorationList\PhysiqueJewel2.cs" />
+    <Compile Include="Data\Decorations\DecorationList\PotentialJewel2.cs" />
+    <Compile Include="Data\Decorations\DecorationList\PreciseJewel2.cs" />
+    <Compile Include="Data\Decorations\DecorationList\ProtectionJewel2.cs" />
+    <Compile Include="Data\Decorations\DecorationList\QuickloadJewel1.cs" />
+    <Compile Include="Data\Decorations\DecorationList\QuickswitchJewel2.cs" />
+    <Compile Include="Data\Decorations\DecorationList\RecoveryJewel1.cs" />
+    <Compile Include="Data\Decorations\DecorationList\RefreshJewel2.cs" />
+    <Compile Include="Data\Decorations\DecorationList\ResistorJewel2.cs" />
+    <Compile Include="Data\Decorations\DecorationList\RodeoJewel2.cs" />
+    <Compile Include="Data\Decorations\DecorationList\SatiatedJewel1.cs" />
+    <Compile Include="Data\Decorations\DecorationList\SheathJewel2.cs" />
+    <Compile Include="Data\Decorations\DecorationList\ShieldJewel2.cs" />
+    <Compile Include="Data\Decorations\DecorationList\SliderJewel1.cs" />
+    <Compile Include="Data\Decorations\DecorationList\SniperJewel1.cs" />
+    <Compile Include="Data\Decorations\DecorationList\SonorousJewel1.cs" />
+    <Compile Include="Data\Decorations\DecorationList\SprinterJewel2.cs" />
+    <Compile Include="Data\Decorations\DecorationList\SteadfastJewel1.cs" />
+    <Compile Include="Data\Decorations\DecorationList\StreamJewel1.cs" />
+    <Compile Include="Data\Decorations\DecorationList\ThunderResJewel1.cs" />
+    <Compile Include="Data\Decorations\DecorationList\TrueshotJewel2.cs" />
+    <Compile Include="Data\Decorations\DecorationList\VenomJewel1.cs" />
+    <Compile Include="Data\Decorations\DecorationList\WallRunJewel2.cs" />
+    <Compile Include="Data\Decorations\DecorationList\WaterResJewel1.cs" />
+    <Compile Include="Data\Decorations\DecorationList\WindResJewel1.cs" />
+    <Compile Include="Data\Decorations\DecorationList\WirebugJewel2.cs" />
+    <Compile Include="Data\Filters\Filter.cs" />
+    <Compile Include="Data\Resistances\Resistance.cs" />
+    <Compile Include="Data\Resistances\ResistanceType.cs" />
+    <Compile Include="Data\Skills\SkillList\AffinitySliding.cs" />
+    <Compile Include="Data\Skills\SkillList\Agitator.cs" />
+    <Compile Include="Data\Skills\Skill.cs" />
+    <Compile Include="Data\Skills\SkillList\AimBooster.cs" />
+    <Compile Include="Data\Skills\SkillList\AmmoUp.cs" />
+    <Compile Include="Data\Skills\SkillList\Artillery.cs" />
+    <Compile Include="Data\Skills\SkillList\AttackBoost.cs" />
+    <Compile Include="Data\Skills\SkillList\BlastAttack.cs" />
+    <Compile Include="Data\Skills\SkillList\BlastResistance.cs" />
+    <Compile Include="Data\Skills\SkillList\BlightResistance.cs" />
+    <Compile Include="Data\Skills\SkillList\Bludgeoner.cs" />
+    <Compile Include="Data\Skills\SkillList\Bombardier.cs" />
+    <Compile Include="Data\Skills\SkillList\Botanist.cs" />
+    <Compile Include="Data\Skills\SkillList\BowChargePlus.cs" />
+    <Compile Include="Data\Skills\SkillList\BubblyDance.cs" />
+    <Compile Include="Data\Skills\SkillList\CaptureMaster.cs" />
+    <Compile Include="Data\Skills\SkillList\CarvingPro.cs" />
+    <Compile Include="Data\Skills\SkillList\Constitution.cs" />
+    <Compile Include="Data\Skills\SkillList\Counterstrike.cs" />
+    <Compile Include="Data\Skills\SkillList\CriticalBoost.cs" />
+    <Compile Include="Data\Skills\SkillList\CriticalDraw.cs" />
+    <Compile Include="Data\Skills\SkillList\CriticalElement.cs" />
+    <Compile Include="Data\Skills\SkillList\CriticalEye.cs" />
+    <Compile Include="Data\Skills\SkillList\DefenseBoost.cs" />
+    <Compile Include="Data\Skills\SkillList\Diversion.cs" />
+    <Compile Include="Data\Skills\SkillList\DivineBlessing.cs" />
+    <Compile Include="Data\Skills\SkillList\DragonAttack.cs" />
+    <Compile Include="Data\Skills\SkillList\DragonResistance.cs" />
+    <Compile Include="Data\Skills\SkillList\Earplugs.cs" />
+    <Compile Include="Data\Skills\SkillList\EvadeExtender.cs" />
+    <Compile Include="Data\Skills\SkillList\EvadeWindow.cs" />
+    <Compile Include="Data\Skills\SkillList\FireAttack.cs" />
+    <Compile Include="Data\Skills\SkillList\FireResistance.cs" />
+    <Compile Include="Data\Skills\SkillList\FlinchFree.cs" />
+    <Compile Include="Data\Skills\SkillList\Focus.cs" />
+    <Compile Include="Data\Skills\SkillList\Fortify.cs" />
+    <Compile Include="Data\Skills\SkillList\FreeMeal.cs" />
+    <Compile Include="Data\Skills\SkillList\Geologist.cs" />
+    <Compile Include="Data\Skills\SkillList\GoodLuck.cs" />
+    <Compile Include="Data\Skills\SkillList\Guard.cs" />
+    <Compile Include="Data\Skills\SkillList\GuardUp.cs" />
+    <Compile Include="Data\Skills\SkillList\Handicraft.cs" />
+    <Compile Include="Data\Skills\SkillList\HellfireCloak.cs" />
+    <Compile Include="Data\Skills\SkillList\Heroics.cs" />
+    <Compile Include="Data\Skills\SkillList\HornMaestro.cs" />
+    <Compile Include="Data\Skills\SkillList\HungerResistance.cs" />
+    <Compile Include="Data\Skills\SkillList\IceAttack.cs" />
+    <Compile Include="Data\Skills\SkillList\IceResistance.cs" />
+    <Compile Include="Data\Skills\SkillList\ItemProlonger.cs" />
+    <Compile Include="Data\Skills\SkillList\JumpMaster.cs" />
+    <Compile Include="Data\Skills\SkillList\LatentPower.cs" />
+    <Compile Include="Data\Skills\SkillList\LeapofFaith.cs" />
+    <Compile Include="Data\Skills\SkillList\LoadShells.cs" />
+    <Compile Include="Data\Skills\SkillList\MarathonRunner.cs" />
+    <Compile Include="Data\Skills\SkillList\MasterMounter.cs" />
+    <Compile Include="Data\Skills\SkillList\MaximumMight.cs" />
+    <Compile Include="Data\Skills\SkillList\MindsEye.cs" />
+    <Compile Include="Data\Skills\SkillList\MuckResistance.cs" />
+    <Compile Include="Data\Skills\SkillList\Mushroomancer.cs" />
+    <Compile Include="Data\Skills\SkillList\NormalRapidUp.cs" />
+    <Compile Include="Data\Skills\SkillList\OffensiveGuard.cs" />
+    <Compile Include="Data\Skills\SkillList\ParalysisAttack.cs" />
+    <Compile Include="Data\Skills\SkillList\ParalysisResistance.cs" />
+    <Compile Include="Data\Skills\SkillList\Partbreaker.cs" />
+    <Compile Include="Data\Skills\SkillList\PeakPerformance.cs" />
+    <Compile Include="Data\Skills\SkillList\PierceUp.cs" />
+    <Compile Include="Data\Skills\SkillList\PoisonAttack.cs" />
+    <Compile Include="Data\Skills\SkillList\PoisonResistance.cs" />
+    <Compile Include="Data\Skills\SkillList\PowerProlonger.cs" />
+    <Compile Include="Data\Skills\SkillList\ProtectivePolish.cs" />
+    <Compile Include="Data\Skills\SkillList\PunishingDraw.cs" />
+    <Compile Include="Data\Skills\SkillList\QuickSheath.cs" />
+    <Compile Include="Data\Skills\SkillList\RapidFireUp.cs" />
+    <Compile Include="Data\Skills\SkillList\RapidMorph.cs" />
+    <Compile Include="Data\Skills\SkillList\RazorSharp.cs" />
+    <Compile Include="Data\Skills\SkillList\RecoilDown.cs" />
+    <Compile Include="Data\Skills\SkillList\RecoverySpeed.cs" />
+    <Compile Include="Data\Skills\SkillList\RecoveryUp.cs" />
+    <Compile Include="Data\Skills\SkillList\ReloadSpeed.cs" />
+    <Compile Include="Data\Skills\SkillList\Resentment.cs" />
+    <Compile Include="Data\Skills\SkillList\Resuscitate.cs" />
+    <Compile Include="Data\Skills\SkillList\SleepAttack.cs" />
+    <Compile Include="Data\Skills\SkillList\SleepResistance.cs" />
+    <Compile Include="Data\Skills\SkillList\Slugger.cs" />
+    <Compile Include="Data\Skills\SkillList\SpareShot.cs" />
+    <Compile Include="Data\Skills\SkillList\SpecialAmmoBoost.cs" />
+    <Compile Include="Data\Skills\SkillList\SpeedEating.cs" />
+    <Compile Include="Data\Skills\SkillList\SpeedSharpening.cs" />
+    <Compile Include="Data\Skills\SkillList\SpreadUp.cs" />
+    <Compile Include="Data\Skills\SkillList\StaminaSurge.cs" />
+    <Compile Include="Data\Skills\SkillList\StaminaThief.cs" />
+    <Compile Include="Data\Skills\SkillList\Steadiness.cs" />
+    <Compile Include="Data\Skills\SkillList\StunResistance.cs" />
+    <Compile Include="Data\Skills\SkillList\ThunderAlignment.cs" />
+    <Compile Include="Data\Skills\SkillList\ThunderAttack.cs" />
+    <Compile Include="Data\Skills\SkillList\ThunderResistance.cs" />
+    <Compile Include="Data\Skills\SkillList\TremorResistance.cs" />
+    <Compile Include="Data\Skills\SkillList\WallRunner.cs" />
+    <Compile Include="Data\Skills\SkillList\WaterAttack.cs" />
+    <Compile Include="Data\Skills\SkillList\WaterResistance.cs" />
+    <Compile Include="Data\Skills\SkillList\WeaknessExploit.cs" />
+    <Compile Include="Data\Skills\SkillList\Wide_Range.cs" />
+    <Compile Include="Data\Skills\SkillList\WindAlignment.cs" />
+    <Compile Include="Data\Skills\SkillList\Windproof.cs" />
+    <Compile Include="Data\Skills\SkillList\WirebugWhisperer.cs" />
+    <Compile Include="Data\Slots\Slot.cs" />
+    <Compile Include="Data\Slots\SlotType.cs" />
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="..\.editorconfig">
+      <Link>.editorconfig</Link>
+    </None>
+    <None Include="FodyWeavers.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="FodyWeavers.xml" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Import Project="..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.3.6.0\build\net472\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.targets" Condition="Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.3.6.0\build\net472\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.targets')" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.3.6.0\build\net472\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.3.6.0\build\net472\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.targets'))" />
+    <Error Condition="!Exists('..\packages\Fody.6.5.1\build\Fody.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Fody.6.5.1\build\Fody.targets'))" />
+    <Error Condition="!Exists('..\packages\Costura.Fody.5.3.0\build\Costura.Fody.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Costura.Fody.5.3.0\build\Costura.Fody.props'))" />
+    <Error Condition="!Exists('..\packages\Costura.Fody.5.3.0\build\Costura.Fody.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Costura.Fody.5.3.0\build\Costura.Fody.targets'))" />
+    <Error Condition="!Exists('..\packages\NETStandard.Library.2.0.3\build\netstandard2.0\NETStandard.Library.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\NETStandard.Library.2.0.3\build\netstandard2.0\NETStandard.Library.targets'))" />
+  </Target>
+  <Import Project="..\packages\Fody.6.5.1\build\Fody.targets" Condition="Exists('..\packages\Fody.6.5.1\build\Fody.targets')" />
+  <Import Project="..\packages\Costura.Fody.5.3.0\build\Costura.Fody.targets" Condition="Exists('..\packages\Costura.Fody.5.3.0\build\Costura.Fody.targets')" />
+  <Import Project="..\packages\NETStandard.Library.2.0.3\build\netstandard2.0\NETStandard.Library.targets" Condition="Exists('..\packages\NETStandard.Library.2.0.3\build\netstandard2.0\NETStandard.Library.targets')" />
+  <PropertyGroup>
+    <PostBuildEvent>cd $(TargetDir)
+del *.xml
+del *.pdb
+del *.exe.config
+RD /S /Q "$(TargetDir)Roslyn\"</PostBuildEvent>
+  </PropertyGroup>
+</Project>
