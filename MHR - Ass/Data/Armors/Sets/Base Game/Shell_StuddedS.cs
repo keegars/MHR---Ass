@@ -22,7 +22,7 @@ namespace MHR___Ass.Data.Armors.Sets
             //Armor skills/slots
 
             Head = new HeadArmor(this)
-                .AddSkill(new AimBooster(2))
+                .AddSkill(new Ballistics(2))
                 .AddSlot(new SmallSlot())
                 .AddSlot(new MediumSlot());
 
@@ -39,7 +39,7 @@ namespace MHR___Ass.Data.Armors.Sets
                 .AddSlot(new SmallSlot());
 
             Waist = new WaistArmor(this)
-                .AddSkill(new AimBooster(1))
+                .AddSkill(new Ballistics(1))
                 .AddSlot(new SmallSlot())
                 .AddSlot(new LargeSlot());
 

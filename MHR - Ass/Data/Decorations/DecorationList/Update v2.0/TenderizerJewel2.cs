@@ -3,12 +3,12 @@ using MHR___Ass.Data.Slots;
 
 namespace MHR___Ass.Data.Decorations.DecorationList
 {
-    public class PreciseJewel2 : Decoration
+    public class TenderizerJewel2 : Decoration
     {
-        public PreciseJewel2()
+        public TenderizerJewel2()
         {
-            Name = "Precise Jewel 2";
-            Skill = new AimBooster(1);
+            Name = "Tenderizer Jewel 2";
+            Skill = new WeaknessExploit(1);
             Type = SlotType.Medium;
         }
     }

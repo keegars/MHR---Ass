@@ -27,7 +27,6 @@ namespace MHR___Ass
         private readonly HashSet<Decoration> _Decorations;
         private readonly HashSet<SkillComboBox> _SkillBoxes;
         private readonly HashSet<SkillComboBox> _CharmSkillBoxes;
-        private readonly object lockObject = new object();
         private BlockingCollection<ArmorSet> _ThreadSafe_Armor_Sets = new BlockingCollection<ArmorSet>();
         private List<ArmorSet> _ArmorSetSearch = new List<ArmorSet>();
         private HashSet<SkillDecoCombo> _searchDecoCombos = new HashSet<SkillDecoCombo>();
@@ -36,10 +35,7 @@ namespace MHR___Ass
         private int _Counter = 0;
         private long _ArmorsSearched = 0;
         private Stopwatch _StopWatch;
-        private int _Max_Parrallel =
-            //Debugger.IsAttached ? 1 :
-            Environment.ProcessorCount;
-        private long _Waiting = 0;
+        private int _Max_Parrallel = Environment.ProcessorCount;
 
         public Form1()
         {
@@ -651,8 +647,6 @@ namespace MHR___Ass
                     {
                         FindCombination(armorSet, _searchDecoCombos);
                     }
-
-                    Interlocked.Increment(ref _Waiting);
 
                     // If limit is reached, return armor sets
                     if (_Counter >= _SearchLimit || (isFinished && queue.Count == 0) || backgroundWorker.CancellationPending)

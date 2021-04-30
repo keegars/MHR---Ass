@@ -33,7 +33,7 @@ namespace MHR___Ass.Data.Armors.Sets
 
             Arm = new ArmArmor(this)
                 .AddSkill(new SpareShot(1))
-                .AddSkill(new AimBooster(1))
+                .AddSkill(new Ballistics(1))
                 .AddSlot(new MediumSlot());
 
             Waist = new WaistArmor(this)
@@ -44,7 +44,7 @@ namespace MHR___Ass.Data.Armors.Sets
 
             Leg = new LegArmor(this)
                 .AddSkill(new Constitution(1))
-                .AddSkill(new AimBooster(1))
+                .AddSkill(new Ballistics(1))
                 .AddSlot(new SmallSlot())
                 .AddSlot(new SmallSlot())
                 .AddSlot(new SmallSlot());

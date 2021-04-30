@@ -28,7 +28,7 @@ namespace MHR___Ass.Data.Armors.Sets
                 .AddSkill(new RecoilDown(1));
 
             Waist = new WaistArmor(this)
-                .AddSkill(new AimBooster(1));
+                .AddSkill(new Ballistics(1));
 
             Leg = new LegArmor(this)
                 .AddSkill(new SpreadUp(1));

@@ -30,6 +30,23 @@ namespace MHR___Ass.Data.Armors.Sets
                 .AddSkill(new CaptureMaster(1))
                 .AddSkill(new Geologist(1))
                 .AddSlot(new SmallSlot());
+
+            Arm = new ArmArmor(this)
+              .AddSlot(new LargeSlot())
+              .AddSlot(new SmallSlot())
+              .AddSkill(new Geologist(2));
+
+            Waist = new WaistArmor(this)
+                  .AddSlot(new LargeSlot())
+              .AddSlot(new SmallSlot())
+              .AddSkill(new GoodLuck(1));
+
+            Leg = new LegArmor(this)
+                .AddSlot(new SmallSlot())
+                .AddSlot(new SmallSlot())
+                .AddSlot(new SmallSlot())
+                .AddSkill(new Botanist(2))
+                .AddSkill(new CarvingPro(1));
         }
     }
 }

@@ -1,25 +1,25 @@
 namespace MHR___Ass.Data.Skills.SkillList
 {
-    public class AimBooster : Skill
+    public class MastersTouch : Skill
     {
         public override int MaxValue { get; set; } = 3;
         public override string Description { get; set; } = @"
-Shortens the distance before ammo and arrows reach maximum power.
-1: Slightly extends range.
-2: Extends range.
-3: Greatly extends range.";
+Prevents your weapon from losing sharpness during critical hits.
+1. Grants a 20% change of no sharpness loss while active.
+2. Grants a 40% change of no sharpness loss while active.
+3. Grants a 80% change of no sharpness loss while active.";
 
-        public AimBooster(int value) : base(value)
+        public MastersTouch(int value) : base(value)
         {
         }
 
-        public AimBooster() : base()
+        public MastersTouch() : base()
         {
         }
 
         public override Skill Clone(int value)
         {
-            var tmp = new AimBooster
+            var tmp = new MastersTouch
             {
                 Description = Description,
                 MaxValue = MaxValue,
