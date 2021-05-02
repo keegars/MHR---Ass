@@ -126,6 +126,7 @@
     <Compile Include="Data\Armors\Sets\Base Game\BoneS.cs" />
     <Compile Include="Data\Armors\Sets\Base Game\Brigade.cs" />
     <Compile Include="Data\Armors\Sets\Base Game\BrigadeS.cs" />
+    <Compile Include="Data\Armors\Sets\Update v2.0\FeatherOfMastery.cs" />
     <Compile Include="Data\Armors\Sets\Update v2.0\FlameSeal.cs" />
     <Compile Include="Data\Armors\Sets\Base Game\BullfangoMask.cs" />
     <Compile Include="Data\Armors\Sets\Base Game\BullfangoMaskS.cs" />
@@ -320,14 +321,18 @@
     <Compile Include="Data\Decorations\DecorationList\Base Game\WaterResJewel1.cs" />
     <Compile Include="Data\Decorations\DecorationList\Base Game\WindResJewel1.cs" />
     <Compile Include="Data\Decorations\DecorationList\Base Game\WirebugJewel2.cs" />
+    <Compile Include="Data\Decorations\DecorationList\Update v2.0\BlastJewel2.cs" />
+    <Compile Include="Data\Decorations\DecorationList\Update v2.0\CriticalJewel2.cs" />
     <Compile Include="Data\Decorations\DecorationList\Update v2.0\FlawlessJewel2.cs" />
     <Compile Include="Data\Decorations\DecorationList\Update v2.0\FurorJewel2.cs" />
     <Compile Include="Data\Decorations\DecorationList\Update v2.0\ForceshotJewel3.cs" />
+    <Compile Include="Data\Decorations\DecorationList\Update v2.0\MasteryJewel2.cs" />
     <Compile Include="Data\Decorations\DecorationList\Update v2.0\PierceJewel3.cs" />
     <Compile Include="Data\Decorations\DecorationList\Update v2.0\ParalyzerJewel2.cs" />
     <Compile Include="Data\Decorations\DecorationList\Update v2.0\CrisisJewel2.cs" />
     <Compile Include="Data\Decorations\DecorationList\Update v2.0\ChallengerJewel2.cs" />
     <Compile Include="Data\Decorations\DecorationList\Update v2.0\TenderizerJewel2.cs" />
+    <Compile Include="Data\Decorations\DecorationList\Update v2.0\SpreadJewel3.cs" />
     <Compile Include="Data\Decorations\DecorationList\Update v2.0\ThrottleJewel2.cs" />
     <Compile Include="Data\Decorations\DecorationList\Update v2.0\SleepJewel2.cs" />
     <Compile Include="Data\Decorations\DecorationList\Update v2.0\SharpJewel2.cs" />
@@ -357,6 +362,7 @@
     <Compile Include="Data\Skills\SkillList\Base Game\BowChargePlus.cs" />
     <Compile Include="Data\Skills\SkillList\Base Game\BubblyDance.cs" />
     <Compile Include="Data\Skills\SkillList\Base Game\CaptureMaster.cs" />
+    <Compile Include="Data\Skills\SkillList\Base Game\CarvingMaster.cs" />
     <Compile Include="Data\Skills\SkillList\Base Game\CarvingPro.cs" />
     <Compile Include="Data\Skills\SkillList\Base Game\Constitution.cs" />
     <Compile Include="Data\Skills\SkillList\Base Game\Counterstrike.cs" />
