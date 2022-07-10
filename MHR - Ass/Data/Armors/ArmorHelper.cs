@@ -28,7 +28,8 @@ namespace MHR___Ass.Data.Armors
             {
                 Small = z.HasSlotTypeCount(SlotType.Small),
                 Medium = z.HasSlotTypeCount(SlotType.Medium),
-                Large = z.HasSlotTypeCount(SlotType.Large)
+                Large = z.HasSlotTypeCount(SlotType.Large),
+                ExtraLarge = z.HasSlotTypeCount(SlotType.ExtraLarge)
             })
             .Select(y => new SlotGrouping
             {
@@ -36,7 +37,8 @@ namespace MHR___Ass.Data.Armors
                 {
                     Small = y.Key.Small,
                     Medium = y.Key.Medium,
-                    Large = y.Key.Large
+                    Large = y.Key.Large,
+                    ExtraLarge = y.Key.ExtraLarge
                 },
                 Armor = y.Select(x => x).ToList()
             }).ToHashSet();
@@ -280,5 +282,6 @@ namespace MHR___Ass.Data.Armors
         public int Small { get; set; }
         public int Medium { get; set; }
         public int Large { get; set; }
+        public int ExtraLarge { get; set; }
     }
 }

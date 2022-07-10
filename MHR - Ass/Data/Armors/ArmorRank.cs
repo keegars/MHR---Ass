@@ -3,6 +3,7 @@
     public enum ArmorRank
     {
         Low,
-        High
+        High,
+        Master
     }
 }

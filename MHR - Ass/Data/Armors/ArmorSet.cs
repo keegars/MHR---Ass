@@ -169,6 +169,7 @@ namespace MHR___Ass.Data.Armors
                 var smallParsed = slotTotals.TryGetValue("Small Slot", out var small);
                 var mediumParsed = slotTotals.TryGetValue("Medium Slot", out var medium);
                 var largeParsed = slotTotals.TryGetValue("Large Slot", out var large);
+                var extralargeParsed = slotTotals.TryGetValue("Extra Large Slot", out var extraLarge);
 
                 if (smallParsed)
                 {
@@ -187,6 +188,14 @@ namespace MHR___Ass.Data.Armors
                     slotCombos.Add(new SlotCombo(small, medium + large));
                     slotCombos.Add(new SlotCombo(small, medium, large));
                 }
+
+                if (extralargeParsed)
+                {
+                    slotCombos.Add(new SlotCombo(small + medium + large + extraLarge));
+                    slotCombos.Add(new SlotCombo(small, medium + large + extraLarge));
+                    slotCombos.Add(new SlotCombo(small, medium, large + extraLarge));
+                    slotCombos.Add(new SlotCombo(small, medium, large, extraLarge));
+                }
             }
 
             return slotCombos;
@@ -194,7 +203,7 @@ namespace MHR___Ass.Data.Armors
 
         public void TryPopulateSlot(Decoration decoration, SlotCombo slotCombo)
         {
-            for (var i = 1; i <= slotCombo.Large + slotCombo.Medium + slotCombo.Small; i++)
+            for (var i = 1; i <= slotCombo.ExtraLarge + slotCombo.Large + slotCombo.Medium + slotCombo.Small; i++)
             {
                 if (Head?.PopulateSlot(decoration) == false)
                 {
@@ -306,7 +315,7 @@ namespace MHR___Ass.Data.Armors
 
                 if (slot.Decoration == null)
                 {
-                    key = slot.Type == SlotType.Large ? "Large Slot" : slot.Type == SlotType.Medium ? "Medium Slot" : "Small Slot";
+                    key = slot.Type == SlotType.ExtraLarge ? "Extra Large Slot" : slot.Type == SlotType.Large ? "Large Slot" : slot.Type == SlotType.Medium ? "Medium Slot" : "Small Slot";
                 }
                 else
                 {

@@ -16,6 +16,7 @@ namespace MHR___Ass.Data.Armors
         private int _Small_Slots = 0;
         private int _Medium_Slots = 0;
         private int _Large_Slots = 0;
+        private int _ExtraLarge_Slots = 0;
         public ArmorType ArmorType { get; set; }
         public Skill? Skill1 { get; set; }
         public Skill? Skill2 { get; set; }
@@ -111,6 +112,10 @@ namespace MHR___Ass.Data.Armors
             else if (slotType == SlotType.Large)
             {
                 return _Large_Slots;
+            }
+            else if (slotType == SlotType.ExtraLarge)
+            {
+                return _ExtraLarge_Slots;
             }
 
             return 0;
@@ -315,6 +320,9 @@ namespace MHR___Ass.Data.Armors
                     break;
                 case SlotType.Large:
                     _Large_Slots++;
+                    break;
+                case SlotType.ExtraLarge:
+                    _ExtraLarge_Slots++;
                     break;
             }
 

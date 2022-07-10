@@ -8,7 +8,7 @@ namespace MHR___Ass.Data.Decorations.DecorationList
         public DiveJewel1()
         {
             Name = "Dive Jewel 1";
-            Skill = new LeapofFaith(1);
+            Skill = new LeapOfFaith(1);
             Type = SlotType.Small;
         }
     }

@@ -8,7 +8,7 @@ namespace MHR___Ass.Data.Decorations.DecorationList
         public FriendshipJewel2()
         {
             Name = "Friendship Jewel 2";
-            Skill = new Wide_Range(1);
+            Skill = new WideRange(1);
             Type = SlotType.Medium;
         }
     }

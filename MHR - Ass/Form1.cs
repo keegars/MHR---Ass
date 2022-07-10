@@ -73,7 +73,8 @@ namespace MHR___Ass
                 "None",
                 "Small",
                 "Medium",
-                "Large"
+                "Large",
+                "Extra Large"
             };
 
             weaponSlot1Box.Items.AddRange(weaponSlots);
@@ -572,7 +573,7 @@ namespace MHR___Ass
                     sb.AppendLine($"{decoration.Key} x {decoration.Value}");
                 }
 
-                foreach (var decoration in freeSlots) //Should go Large, Medium, Small
+                foreach (var decoration in freeSlots) //Should go Extra Large, Large, Medium, Small
                 {
                     sb.AppendLine($"{decoration.Key} x {decoration.Value}");
                 }
@@ -774,12 +775,16 @@ namespace MHR___Ass
                             requiredSlots.Large += skillNeeded;
                             requiredSlotPerSkill[skill.Skill.Name].Large += skillNeeded;
                             break;
+                        case SlotType.ExtraLarge:
+                            requiredSlots.ExtraLarge += skillNeeded;
+                            requiredSlotPerSkill[skill.Skill.Name].ExtraLarge += skillNeeded;
+                            break;
                     }
                 }
             }
 
             //if no slots are required, then great!
-            if (requiredSlots.Small + requiredSlots.Medium + requiredSlots.Large == 0)
+            if (requiredSlots.Small + requiredSlots.Medium + requiredSlots.Large + requiredSlots.ExtraLarge == 0)
             {
                 return true;
             }
@@ -787,12 +792,12 @@ namespace MHR___Ass
             //Check the decorations needed against the slot combos, if we have one great! If not, then we return false.
             foreach (var combo in slotCombos)
             {
-                if (requiredSlots.Small <= combo.Small && requiredSlots.Medium <= combo.Medium && requiredSlots.Large <= combo.Large)
+                if (requiredSlots.Small <= combo.Small && requiredSlots.Medium <= combo.Medium && requiredSlots.Large <= combo.Large && requiredSlots.ExtraLarge <= combo.ExtraLarge)
                 {
                     if (populateSlot)
                     {
                         //Lets populate the skills
-                        foreach (var slotPerSkill in requiredSlotPerSkill.OrderByDescending(z => z.Value.Large).ThenByDescending(z => z.Value.Medium).ThenByDescending(z => z.Value.Small))
+                        foreach (var slotPerSkill in requiredSlotPerSkill.OrderByDescending(z => z.Value.ExtraLarge).OrderByDescending(z => z.Value.Large).ThenByDescending(z => z.Value.Medium).ThenByDescending(z => z.Value.Small))
                         {
                             var skill = searchSkills.First(z => z.Skill.Name == slotPerSkill.Key);
 
